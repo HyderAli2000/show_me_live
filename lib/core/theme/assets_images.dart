@@ -15,8 +15,8 @@ class AssetImages {
   static const String u7 = 'assets/images/u7.png';
   static const String eve1 = 'assets/images/eve1.png';
   static const String eve2 = 'assets/images/eve2.png';
-  static const String cat1 = 'assets/images/cat1.jpg';
-  static const String cat2 = 'assets/images/cat2.jpg';
-  static const String cat3 = 'assets/images/cat3.jpg';
-  static const String cat4 = 'assets/images/cat4.jpg';
+  static const String cat1 = 'assets/images/cat1.png';
+  static const String cat2 = 'assets/images/cat2.png';
+  static const String cat3 = 'assets/images/cat3.png';
+  static const String cat4 = 'assets/images/cat4.png';
 }

@@ -48,18 +48,15 @@ class AppHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
                   clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    border: Border.all(
-                      color: AppColors.primaryBlue.withValues(alpha: 0.8),
-                      width: 1.5,
-                    ),
                     image: DecorationImage(
                       image: AssetImage(AssetImages.u1),
                       fit: BoxFit.cover,
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: AppColors.primaryBlue.withValues(alpha: 0.35),
+                        color: AppColors.darkBlue.withValues(alpha: 0.35),
                         blurRadius: 10,
+                        offset: const Offset(0, 6),
                       ),
                     ],
                   ),
