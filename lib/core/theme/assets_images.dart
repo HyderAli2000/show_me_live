@@ -1,0 +1,22 @@
+class AssetImages {
+  static const String logo = 'assets/images/logo.png';
+  static const String onboarding1 = 'assets/images/onboarding1.png';
+  static const String onboarding2 = 'assets/images/onboarding2.png';
+  static const String onboarding3 = 'assets/images/onboarding3.png';
+  static const String splashBg = 'assets/images/splashBg.png';
+  static const String accBg = 'assets/images/accBg.png';
+  static const String allBg = 'assets/images/allBg.png';
+  static const String u1 = 'assets/images/u1.jpg';
+  static const String u2 = 'assets/images/u2.png';
+  static const String u3 = 'assets/images/u3.png';
+  static const String u4 = 'assets/images/u4.png';
+  static const String u5 = 'assets/images/u5.png';
+  static const String u6 = 'assets/images/u6.png';
+  static const String u7 = 'assets/images/u7.png';
+  static const String eve1 = 'assets/images/eve1.png';
+  static const String eve2 = 'assets/images/eve2.png';
+  static const String cat1 = 'assets/images/cat1.jpg';
+  static const String cat2 = 'assets/images/cat2.jpg';
+  static const String cat3 = 'assets/images/cat3.jpg';
+  static const String cat4 = 'assets/images/cat4.jpg';
+}
