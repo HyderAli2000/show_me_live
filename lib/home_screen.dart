@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import 'package:show_me_live/core/theme/app_colors.dart';
 import 'package:show_me_live/core/theme/app_fonts.dart';
 import 'package:show_me_live/core/theme/assets_icons.dart';
 import 'package:show_me_live/core/theme/assets_images.dart';
+import 'package:show_me_live/features/events/models/event_checkout_data.dart';
+import 'package:show_me_live/features/events/screens/create_event_screen.dart';
+import 'package:show_me_live/features/events/screens/event_details_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -131,7 +135,9 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: Container(
+      floatingActionButton: GestureDetector(
+        onTap: () => Get.to(() => const CreateEventScreen()),
+        child: Container(
         width: 50.w,
         height: 50.w,
         decoration: BoxDecoration(
@@ -155,6 +161,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
         child: Icon(Icons.add, size: 24.sp, color: AppColors.darkBlue),
+        ),
       ),
     );
   }
@@ -230,7 +237,11 @@ class _EventCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return GestureDetector(
+      onTap: () => Get.to(
+        () => EventDetailsScreen(event: event.toCheckoutData()),
+      ),
+      child: Container(
       width: width,
       padding: EdgeInsets.all(10.w),
       decoration: BoxDecoration(
@@ -332,6 +343,7 @@ class _EventCard extends StatelessWidget {
           ),
         ],
       ),
+      ),
     );
   }
 }
@@ -357,4 +369,12 @@ class _EventData {
   final String title;
   final String price;
   final String date;
+
+  EventCheckoutData toCheckoutData() => EventCheckoutData(
+        image: image,
+        title: title,
+        subtitle: 'Lorem ipsum dolor sit amet.',
+        price: price,
+        displayDate: date,
+      );
 }

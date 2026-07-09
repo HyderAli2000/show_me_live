@@ -19,4 +19,5 @@ class AssetImages {
   static const String cat2 = 'assets/images/cat2.png';
   static const String cat3 = 'assets/images/cat3.png';
   static const String cat4 = 'assets/images/cat4.png';
+  static const String live = 'assets/images/live.png';
 }

@@ -10,4 +10,14 @@ class AssetIcons {
   static const String wallB = 'assets/icons/wallB.png';
   static const String profB = 'assets/icons/profB.png';
   static const String noti = 'assets/icons/noti.png';
+  static const String clock = 'assets/icons/clock.png';
+  static const String atten = 'assets/icons/atten.png';
+  static const String thumb = 'assets/icons/thumb.png';
+  static const String tnc = 'assets/icons/tnc.png';
+  static const String about = 'assets/icons/about.png';
+  static const String locki = 'assets/icons/locki.png';
+  static const String device = 'assets/icons/device.png';
+  static const String dlt = 'assets/icons/dlt.png';
+  static const String supp = 'assets/icons/supp.png';
+  static const String send = 'assets/icons/send.png';
 }

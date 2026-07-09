@@ -5,32 +5,16 @@ import 'package:show_me_live/core/theme/app_colors.dart';
 import 'package:show_me_live/core/theme/app_fonts.dart';
 import 'package:show_me_live/core/widgets/app_background.dart';
 
-enum AgreementsTab { terms, privacy }
-
-class AgreementsScreen extends StatefulWidget {
-  const AgreementsScreen({super.key, this.initialTab = AgreementsTab.terms});
-
-  final AgreementsTab initialTab;
+class AboutApp extends StatefulWidget {
+  const AboutApp({super.key});
 
   @override
-  State<AgreementsScreen> createState() => _AgreementsScreenState();
+  State<AboutApp> createState() => _AboutAppState();
 }
 
-class _AgreementsScreenState extends State<AgreementsScreen> {
-  late AgreementsTab _activeTab;
-
-  @override
-  void initState() {
-    super.initState();
-    _activeTab = widget.initialTab;
-  }
-
+class _AboutAppState extends State<AboutApp> {
   @override
   Widget build(BuildContext context) {
-    final bodyText = _activeTab == AgreementsTab.terms
-        ? _loremTerms
-        : _loremPrivacy;
-
     return Scaffold(
       backgroundColor: Colors.transparent,
       extendBodyBehindAppBar: true,
@@ -54,7 +38,7 @@ class _AgreementsScreenState extends State<AgreementsScreen> {
           ),
         ),
         title: Text(
-          'Agreements',
+          'About App',
           style: TextStyle(
             fontFamily: AppFonts.tactic,
             fontSize: 18.sp,
@@ -71,31 +55,6 @@ class _AgreementsScreenState extends State<AgreementsScreen> {
           child: Column(
             children: [
               SizedBox(height: 8.h),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 24.w),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: _agreementTabItem(
-                        label: 'Terms & Conditions',
-                        isActive: _activeTab == AgreementsTab.terms,
-                        onTap: () =>
-                            setState(() => _activeTab = AgreementsTab.terms),
-                      ),
-                    ),
-                    SizedBox(width: 18.w),
-                    Expanded(
-                      child: _agreementTabItem(
-                        label: 'Privacy Policy',
-                        isActive: _activeTab == AgreementsTab.privacy,
-                        onTap: () =>
-                            setState(() => _activeTab = AgreementsTab.privacy),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: 10.h),
               Expanded(
                 child: SingleChildScrollView(
                   padding: EdgeInsets.symmetric(horizontal: 24.w),
@@ -103,7 +62,17 @@ class _AgreementsScreenState extends State<AgreementsScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        bodyText,
+                        'Lorem ipsum dolor sit amet consectetur.',
+                        style: TextStyle(
+                          fontFamily: AppFonts.tactic,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.white,
+                        ),
+                      ),
+                      20.verticalSpace,
+                      Text(
+                        _loremTerms,
                         style: TextStyle(
                           fontFamily: AppFonts.satoshi,
                           fontSize: 14.sp,
@@ -116,52 +85,30 @@ class _AgreementsScreenState extends State<AgreementsScreen> {
                   ),
                 ),
               ),
+              20.verticalSpace,
+              Text(
+                "Show Me Live",
+                style: TextStyle(
+                  fontFamily: AppFonts.tactic,
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xff6155F9),
+                ),
+              ),
+              10.verticalSpace,
+              Text(
+                'Version 1.0.0',
+                style: TextStyle(
+                  fontFamily: AppFonts.satoshi,
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w400,
+                  color: AppColors.white.withValues(alpha: 0.46),
+                ),
+              ),
+              30.verticalSpace,
             ],
           ),
         ),
-      ),
-    );
-  }
-
-  Widget _agreementTabItem({
-    required String label,
-    required bool isActive,
-    required VoidCallback onTap,
-  }) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(10.r),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 6.h),
-            child: Text(
-              label,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontFamily: AppFonts.satoshi,
-                fontSize: 16.sp,
-                fontWeight: isActive ? FontWeight.w700 : FontWeight.w500,
-                color: isActive
-                    ? AppColors.white
-                    : AppColors.white.withValues(alpha: 0.45),
-              ),
-            ),
-          ),
-          AnimatedContainer(
-            duration: const Duration(milliseconds: 200),
-            curve: Curves.easeInOut,
-            height: 2.h,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: isActive
-                  ? AppColors.primaryBlue
-                  : AppColors.white.withValues(alpha: 0.18),
-              borderRadius: BorderRadius.circular(99),
-            ),
-          ),
-        ],
       ),
     );
   }
@@ -188,23 +135,30 @@ Aliquet nec, urna, sit amet scelerisque. Lorem ipsum dolor sit amet.
 Consectetur adipiscing elit. Quisque at nibh at lectus iaculis.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis
 unde omnis iste natus error sit voluptatem accusantium doloremque.
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis
 felis vitae nisi sit amet. Integer in nisi at nunc commodo interdum.
 Aliquet nec, urna, sit amet scelerisque. Lorem ipsum dolor sit amet.
 Consectetur adipiscing elit. Quisque at nibh at lectus iaculis.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis
 unde omnis iste natus error sit voluptatem accusantium doloremque.
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis
 felis vitae nisi sit amet. Integer in nisi at nunc commodo interdum.
 Aliquet nec, urna, sit amet scelerisque. Lorem ipsum dolor sit amet.
 Consectetur adipiscing elit. Quisque at nibh at lectus iaculis.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis
 unde omnis iste natus error sit voluptatem accusantium doloremque.
-''';
-
-const String _loremPrivacy = '''
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis
+felis vitae nisi sit amet. Integer in nisi at nunc commodo interdum.
+Aliquet nec, urna, sit amet scelerisque. Lorem ipsum dolor sit amet.
+Consectetur adipiscing elit. Quisque at nibh at lectus iaculis.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis
+unde omnis iste natus error sit voluptatem accusantium doloremque.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis
+felis vitae nisi sit amet. Integer in nisi at nunc commodo interdum.
+Aliquet nec, urna, sit amet scelerisque. Lorem ipsum dolor sit amet.
+Consectetur adipiscing elit. Quisque at nibh at lectus iaculis.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis
+unde omnis iste natus error sit voluptatem accusantium doloremque.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis
 felis vitae nisi sit amet. Integer in nisi at nunc commodo interdum.
 Aliquet nec, urna, sit amet scelerisque. Lorem ipsum dolor sit amet.

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import 'package:show_me_live/core/theme/app_colors.dart';
 import 'package:show_me_live/core/theme/app_fonts.dart';
 import 'package:show_me_live/core/theme/assets_icons.dart';
 import 'package:show_me_live/core/theme/assets_images.dart';
+import 'package:show_me_live/features/home/screens/account_settings_screen.dart';
 
 class AppHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const AppHomeAppBar({
@@ -42,23 +44,28 @@ class AppHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
           children: [
             Row(
               children: [
-                Container(
-                  width: 50.w,
-                  height: 50.w,
-                  clipBehavior: Clip.hardEdge,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      image: AssetImage(AssetImages.u1),
-                      fit: BoxFit.cover,
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: AppColors.darkBlue.withValues(alpha: 0.35),
-                        blurRadius: 10,
-                        offset: const Offset(0, 6),
+                GestureDetector(
+                  onTap: () {
+                    Get.to(() => const AccountSettingsScreen());
+                  },
+                  child: Container(
+                    width: 50.w,
+                    height: 50.w,
+                    clipBehavior: Clip.hardEdge,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: AssetImage(AssetImages.u1),
+                        fit: BoxFit.cover,
                       ),
-                    ],
+                      boxShadow: [
+                        BoxShadow(
+                          color: AppColors.darkBlue.withValues(alpha: 0.35),
+                          blurRadius: 10,
+                          offset: const Offset(0, 6),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 12.horizontalSpace,

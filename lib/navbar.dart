@@ -4,8 +4,10 @@ import 'package:show_me_live/core/theme/assets_icons.dart';
 import 'package:show_me_live/core/theme/assets_images.dart';
 import 'package:show_me_live/core/widgets/navbar/app_bottom_nav_bar.dart';
 import 'package:show_me_live/core/widgets/navbar/app_home_app_bar.dart';
+import 'package:show_me_live/features/events/screens/create_event_screen.dart';
 import 'package:show_me_live/features/home/screens/discover_screen.dart';
 import 'package:show_me_live/features/home/screens/events_screen.dart';
+import 'package:show_me_live/features/home/screens/notifications_screen.dart';
 import 'package:show_me_live/features/home/screens/profile_screen.dart';
 import 'package:show_me_live/features/home/screens/wallet_screen.dart';
 import 'package:show_me_live/home_screen.dart';
@@ -42,8 +44,9 @@ class _NavbarState extends State<Navbar> {
             backgroundColor: Colors.transparent,
             appBar: AppHomeAppBar(
               showSearchRow: controller.currentIndex <= 1,
-              onNotificationTap: () {},
-              onAddTap: () {},
+              onNotificationTap: () =>
+                  Get.to(() => const NotificationsScreen()),
+              onAddTap: () => Get.to(() => const CreateEventScreen()),
               onSearchTap: () {},
             ),
             body: SafeArea(
@@ -55,7 +58,7 @@ class _NavbarState extends State<Navbar> {
               items: controller.navItems,
               onTap: controller.itemSelect,
               showFab: controller.currentIndex <= 3,
-              onFabTap: () {},
+              onFabTap: () => Get.to(() => const CreateEventScreen()),
             ),
           ),
         );
