@@ -19,6 +19,7 @@ class AppTopBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.transparent,
       elevation: 0,
       automaticallyImplyLeading: false,
+      leadingWidth: 70.w,
       leading: GestureDetector(
         onTap: () => Get.back(),
         child: Container(
@@ -41,7 +42,7 @@ class AppTopBar extends StatelessWidget implements PreferredSizeWidget {
             title,
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontFamily: AppFonts.tactic,
+              fontFamily: AppFonts.arial,
               fontSize: 21.sp,
               fontWeight: FontWeight.w700,
               color: AppColors.white,

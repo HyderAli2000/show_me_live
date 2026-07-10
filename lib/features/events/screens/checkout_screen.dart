@@ -11,7 +11,6 @@ import 'package:show_me_live/features/events/models/event_checkout_data.dart';
 import 'package:show_me_live/features/events/models/payment_method.dart';
 import 'package:show_me_live/features/events/screens/add_new_card_screen.dart';
 import 'package:show_me_live/features/events/widgets/event_screen_app_bar.dart';
-import 'package:show_me_live/home_screen.dart';
 import 'package:show_me_live/navbar.dart';
 
 class CheckoutScreen extends StatefulWidget {
@@ -116,7 +115,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                             Text(
                               'Add New Card',
                               style: TextStyle(
-                                fontFamily: AppFonts.satoshi,
+                                fontFamily: AppFonts.arial,
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w600,
                                 color: AppColors.white,
@@ -231,7 +230,7 @@ class _EventPreviewCard extends StatelessWidget {
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w600,
                     color: AppColors.white,
@@ -243,7 +242,7 @@ class _EventPreviewCard extends StatelessWidget {
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 12.sp,
                     color: AppColors.white.withValues(alpha: 0.55),
                   ),
@@ -254,7 +253,7 @@ class _EventPreviewCard extends StatelessWidget {
                     Text(
                       event.price,
                       style: TextStyle(
-                        fontFamily: AppFonts.tactic,
+                        fontFamily: AppFonts.arial,
                         fontSize: 16.sp,
                         fontWeight: FontWeight.w700,
                         color: AppColors.primaryBlue,
@@ -270,7 +269,7 @@ class _EventPreviewCard extends StatelessWidget {
                     Text(
                       event.displayDate,
                       style: TextStyle(
-                        fontFamily: AppFonts.satoshi,
+                        fontFamily: AppFonts.arial,
                         fontSize: 11.sp,
                         color: AppColors.white.withValues(alpha: 0.55),
                       ),
@@ -296,7 +295,7 @@ class _SectionHeading extends StatelessWidget {
     return Text(
       title,
       style: TextStyle(
-        fontFamily: AppFonts.tactic,
+        fontFamily: AppFonts.arial,
         fontSize: 18.sp,
         fontWeight: FontWeight.w700,
         color: AppColors.white,
@@ -387,7 +386,7 @@ class _PaymentMethodTile extends StatelessWidget {
                   Text(
                     method.title,
                     style: TextStyle(
-                      fontFamily: AppFonts.satoshi,
+                      fontFamily: AppFonts.arial,
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w600,
                       color: AppColors.white,
@@ -398,7 +397,7 @@ class _PaymentMethodTile extends StatelessWidget {
                     Text(
                       method.subtitle!,
                       style: TextStyle(
-                        fontFamily: AppFonts.satoshi,
+                        fontFamily: AppFonts.arial,
                         fontSize: 12.sp,
                         color: AppColors.white.withValues(alpha: 0.5),
                       ),
@@ -473,7 +472,7 @@ class _PaymentBrandIcon extends StatelessWidget {
             : Text(
                 method.title.isNotEmpty ? method.title[0] : '?',
                 style: TextStyle(
-                  fontFamily: AppFonts.satoshi,
+                  fontFamily: AppFonts.arial,
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w700,
                   color: method.brandColor ?? AppColors.white,
@@ -537,7 +536,7 @@ class _SummaryRow extends StatelessWidget {
         Text(
           label,
           style: TextStyle(
-            fontFamily: AppFonts.satoshi,
+            fontFamily: AppFonts.arial,
             fontSize: isTotal ? 16.sp : 14.sp,
             fontWeight: isTotal ? FontWeight.w700 : FontWeight.w500,
             color: AppColors.white.withValues(alpha: isTotal ? 1 : 0.75),
@@ -547,7 +546,7 @@ class _SummaryRow extends StatelessWidget {
         Text(
           value,
           style: TextStyle(
-            fontFamily: AppFonts.satoshi,
+            fontFamily: AppFonts.arial,
             fontSize: isTotal ? 16.sp : 14.sp,
             fontWeight: isTotal ? FontWeight.w700 : FontWeight.w500,
             color: AppColors.white,

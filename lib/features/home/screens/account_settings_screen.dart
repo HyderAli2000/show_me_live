@@ -202,7 +202,7 @@ class _ProfileCard extends StatelessWidget {
                 Text(
                   name,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w700,
                     color: AppColors.white,
@@ -212,7 +212,7 @@ class _ProfileCard extends StatelessWidget {
                 Text(
                   email,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 13.sp,
                     color: AppColors.white.withValues(alpha: 0.75),
                   ),
@@ -237,7 +237,7 @@ class _SectionHeader extends StatelessWidget {
     return Text(
       title,
       style: TextStyle(
-        fontFamily: AppFonts.tactic,
+        fontFamily: AppFonts.arial,
         fontSize: 16.sp,
         fontWeight: FontWeight.w700,
         color: AppColors.white,
@@ -283,7 +283,7 @@ class _SettingsTile extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w600,
                     color: AppColors.white,
@@ -293,7 +293,7 @@ class _SettingsTile extends StatelessWidget {
                 Text(
                   subtitle,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 14.sp,
                     color: AppColors.white.withValues(alpha: 0.5),
                   ),

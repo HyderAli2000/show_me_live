@@ -115,7 +115,7 @@ class _DialogHeader extends StatelessWidget {
               child: Text(
                 title,
                 style: TextStyle(
-                  fontFamily: AppFonts.tactic,
+                  fontFamily: AppFonts.arial,
                   fontSize: 22.sp,
                   fontWeight: FontWeight.w700,
                   color: AppColors.white,
@@ -137,7 +137,7 @@ class _DialogHeader extends StatelessWidget {
           Text(
             subtitle!,
             style: TextStyle(
-              fontFamily: AppFonts.satoshi,
+              fontFamily: AppFonts.arial,
               fontSize: 13.sp,
               height: 1.4,
               color: AppColors.white.withValues(alpha: 0.55),
@@ -179,7 +179,7 @@ class _AddAnotherCameraDialog extends StatelessWidget {
             child: Text(
               'Add Email Address',
               style: TextStyle(
-                fontFamily: AppFonts.satoshi,
+                fontFamily: AppFonts.arial,
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w600,
                 color: AppColors.white.withValues(alpha: 0.85),
@@ -190,7 +190,7 @@ class _AddAnotherCameraDialog extends StatelessWidget {
           Text(
             'OR',
             style: TextStyle(
-              fontFamily: AppFonts.satoshi,
+              fontFamily: AppFonts.arial,
               fontSize: 13.sp,
               fontWeight: FontWeight.w600,
               color: AppColors.white.withValues(alpha: 0.45),
@@ -285,7 +285,7 @@ class _ProCameraPaymentDialogState extends State<_ProCameraPaymentDialog> {
                   Text(
                     'Total Amount:',
                     style: TextStyle(
-                      fontFamily: AppFonts.satoshi,
+                      fontFamily: AppFonts.arial,
                       fontSize: 14.sp,
                       color: AppColors.white.withValues(alpha: 0.75),
                     ),
@@ -294,7 +294,7 @@ class _ProCameraPaymentDialogState extends State<_ProCameraPaymentDialog> {
                   Text(
                     r'$1000',
                     style: TextStyle(
-                      fontFamily: AppFonts.tactic,
+                      fontFamily: AppFonts.arial,
                       fontSize: 20.sp,
                       fontWeight: FontWeight.w700,
                       color: AppColors.white,
@@ -307,7 +307,7 @@ class _ProCameraPaymentDialogState extends State<_ProCameraPaymentDialog> {
             Text(
               'Saved Payment Methods',
               style: TextStyle(
-                fontFamily: AppFonts.satoshi,
+                fontFamily: AppFonts.arial,
                 fontSize: 12.sp,
                 fontWeight: FontWeight.w600,
                 letterSpacing: 0.4,
@@ -336,7 +336,7 @@ class _ProCameraPaymentDialogState extends State<_ProCameraPaymentDialog> {
             Text(
               'Quick Pay',
               style: TextStyle(
-                fontFamily: AppFonts.satoshi,
+                fontFamily: AppFonts.arial,
                 fontSize: 12.sp,
                 fontWeight: FontWeight.w600,
                 letterSpacing: 0.4,
@@ -426,7 +426,7 @@ class _SavedPaymentTile extends StatelessWidget {
               child: Text(
                 brandLabel,
                 style: TextStyle(
-                  fontFamily: AppFonts.satoshi,
+                  fontFamily: AppFonts.arial,
                   fontSize: 10.sp,
                   fontWeight: FontWeight.w800,
                   color: brandColor,
@@ -441,7 +441,7 @@ class _SavedPaymentTile extends StatelessWidget {
                   Text(
                     title,
                     style: TextStyle(
-                      fontFamily: AppFonts.satoshi,
+                      fontFamily: AppFonts.arial,
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w600,
                       color: AppColors.white,
@@ -451,7 +451,7 @@ class _SavedPaymentTile extends StatelessWidget {
                   Text(
                     subtitle,
                     style: TextStyle(
-                      fontFamily: AppFonts.satoshi,
+                      fontFamily: AppFonts.arial,
                       fontSize: 12.sp,
                       color: AppColors.white.withValues(alpha: 0.5),
                     ),
@@ -496,7 +496,7 @@ class _QuickPayButton extends StatelessWidget {
           Text(
             label,
             style: TextStyle(
-              fontFamily: AppFonts.satoshi,
+              fontFamily: AppFonts.arial,
               fontSize: 13.sp,
               fontWeight: FontWeight.w600,
               color: AppColors.white,
@@ -565,7 +565,7 @@ class _AddEmailAddressDialogState extends State<_AddEmailAddressDialog> {
                   Text(
                     'Add Another',
                     style: TextStyle(
-                      fontFamily: AppFonts.satoshi,
+                      fontFamily: AppFonts.arial,
                       fontSize: 13.sp,
                       fontWeight: FontWeight.w600,
                       color: AppColors.white.withValues(alpha: 0.85),

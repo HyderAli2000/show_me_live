@@ -60,7 +60,7 @@ class AppSuccessScreen extends StatelessWidget {
                           title,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontFamily: AppFonts.tactic,
+                            fontFamily: AppFonts.arial,
                             fontSize: 28.sp,
                             fontWeight: FontWeight.w700,
                             color: AppColors.white,
@@ -71,7 +71,7 @@ class AppSuccessScreen extends StatelessWidget {
                           description,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontFamily: AppFonts.satoshi,
+                            fontFamily: AppFonts.arial,
                             fontSize: 14.sp,
                             height: 1.55,
                             color: AppColors.white.withValues(alpha: 0.65),
@@ -83,7 +83,7 @@ class AppSuccessScreen extends StatelessWidget {
                             linkText!,
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontFamily: AppFonts.satoshi,
+                              fontFamily: AppFonts.arial,
                               fontSize: 14.sp,
                               fontWeight: FontWeight.w500,
                               color: AppColors.white.withValues(alpha: 0.85),
@@ -103,7 +103,7 @@ class AppSuccessScreen extends StatelessWidget {
                       child: Text(
                         secondaryActionLabel!,
                         style: TextStyle(
-                          fontFamily: AppFonts.satoshi,
+                          fontFamily: AppFonts.arial,
                           fontSize: 15.sp,
                           fontWeight: FontWeight.w600,
                           color: AppColors.white.withValues(alpha: 0.75),

@@ -239,7 +239,7 @@ class _EventTypeDropdownState extends State<_EventTypeDropdown> {
                           ? 'Event Type'
                           : _labelFor(widget.selectedValue!),
                       style: TextStyle(
-                        fontFamily: AppFonts.satoshi,
+                        fontFamily: AppFonts.arial,
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w500,
                         color: widget.selectedValue == null
@@ -286,7 +286,7 @@ class _EventTypeDropdownState extends State<_EventTypeDropdown> {
                         child: RichText(
                           text: TextSpan(
                             style: TextStyle(
-                              fontFamily: AppFonts.satoshi,
+                              fontFamily: AppFonts.arial,
                               fontSize: 14.sp,
                               height: 1.35,
                             ),
@@ -360,7 +360,7 @@ class _UploadImageBox extends StatelessWidget {
               Text(
                 'Upload Image',
                 style: TextStyle(
-                  fontFamily: AppFonts.satoshi,
+                  fontFamily: AppFonts.arial,
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w500,
                   color: AppColors.white.withValues(alpha: 0.75),
@@ -387,14 +387,14 @@ class _MultilineField extends StatelessWidget {
       maxLines: 5,
       minLines: 5,
       style: TextStyle(
-        fontFamily: AppFonts.satoshi,
+        fontFamily: AppFonts.arial,
         color: AppColors.textDim,
         fontSize: 14.sp,
       ),
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: TextStyle(
-          fontFamily: AppFonts.satoshi,
+          fontFamily: AppFonts.arial,
           color: AppColors.hintText,
           fontSize: 14.sp,
         ),

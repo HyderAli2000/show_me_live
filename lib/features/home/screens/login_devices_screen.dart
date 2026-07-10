@@ -51,7 +51,7 @@ class LoginDevicesScreen extends StatelessWidget {
                 Text(
                   'Your Devices',
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w700,
                     color: AppColors.white,
@@ -61,7 +61,7 @@ class LoginDevicesScreen extends StatelessWidget {
                 Text(
                   "You're signed in on these devices or have been in the last 28 days. There might be multiple activity sessions from the same device.",
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 13.sp,
                     height: 1.5,
                     color: AppColors.white.withValues(alpha: 0.55),
@@ -132,7 +132,7 @@ class _DeviceCard extends StatelessWidget {
                 Text(
                   device.sessionTitle,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w700,
                     color: AppColors.white,
@@ -142,7 +142,7 @@ class _DeviceCard extends StatelessWidget {
                 Text(
                   device.lastActive,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 13.sp,
                     color: AppColors.white.withValues(alpha: 0.85),
                   ),
@@ -151,7 +151,7 @@ class _DeviceCard extends StatelessWidget {
                 Text(
                   device.deviceName,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w600,
                     color: AppColors.white,
@@ -161,7 +161,7 @@ class _DeviceCard extends StatelessWidget {
                 Text(
                   device.location,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 13.sp,
                     color: AppColors.white.withValues(alpha: 0.7),
                   ),
@@ -170,7 +170,7 @@ class _DeviceCard extends StatelessWidget {
                 Text(
                   device.deviceType,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 13.sp,
                     color: AppColors.white.withValues(alpha: 0.55),
                   ),
@@ -189,7 +189,7 @@ class _DeviceCard extends StatelessWidget {
                     child: Text(
                       'New',
                       style: TextStyle(
-                        fontFamily: AppFonts.satoshi,
+                        fontFamily: AppFonts.arial,
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w700,
                         color: AppColors.white,

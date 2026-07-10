@@ -115,13 +115,13 @@ class _AppTextFieldState extends State<AppTextField> {
       onChanged: widget.onChanged,
       onSubmitted: widget.onSubmitted,
       style: TextStyle(
-        fontFamily: AppFonts.satoshi,
+        fontFamily: AppFonts.arial,
         color: widget.textColor ?? AppColors.textDim,
       ),
       decoration: InputDecoration(
         hintText: widget.hintText,
         hintStyle: TextStyle(
-          fontFamily: AppFonts.satoshi,
+          fontFamily: AppFonts.arial,
           color: widget.hintColor ?? AppColors.hintText,
           fontSize: 14.sp,
         ),

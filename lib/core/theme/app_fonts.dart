@@ -1,9 +1,8 @@
 abstract final class AppFonts {
-  static const String satoshi = 'Satoshi';
-  static const String tactic = 'Tactic';
+  static const String arial = 'Arial';
 
   /// Default app font family.
-  static const String family = satoshi;
+  static const String family = arial;
 
   static const List<String> fallback = <String>[];
 }

@@ -91,7 +91,7 @@ class SendGiftBottomSheet extends StatelessWidget {
                   Text(
                     'Send a Gift',
                     style: TextStyle(
-                      fontFamily: AppFonts.tactic,
+                      fontFamily: AppFonts.arial,
                       fontSize: 20.sp,
                       fontWeight: FontWeight.w700,
                       color: AppColors.white,
@@ -140,7 +140,7 @@ class SendGiftBottomSheet extends StatelessWidget {
 }
 
 class GiftTile extends StatelessWidget {
-  const GiftTile({required this.gift});
+  const GiftTile({super.key, required this.gift});
 
   final GiftItem gift;
 
@@ -157,7 +157,7 @@ class GiftTile extends StatelessWidget {
           textAlign: TextAlign.center,
           maxLines: 2,
           style: TextStyle(
-            fontFamily: AppFonts.satoshi,
+            fontFamily: AppFonts.arial,
             fontSize: 13.sp,
             fontWeight: FontWeight.w600,
             height: 1.25,
@@ -168,7 +168,7 @@ class GiftTile extends StatelessWidget {
         Text(
           gift.price,
           style: TextStyle(
-            fontFamily: AppFonts.satoshi,
+            fontFamily: AppFonts.arial,
             fontSize: 13.sp,
             fontWeight: FontWeight.w700,
             color: AppColors.white.withValues(alpha: 0.85),

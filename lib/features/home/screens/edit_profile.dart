@@ -21,6 +21,7 @@ class EditProfileScreen extends StatelessWidget {
       backgroundColor: Colors.transparent,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        leadingWidth: 70.w,
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: GestureDetector(
@@ -43,7 +44,7 @@ class EditProfileScreen extends StatelessWidget {
           'Edit Profile',
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontFamily: AppFonts.tactic,
+            fontFamily: AppFonts.arial,
             fontSize: 21.sp,
             fontWeight: FontWeight.w700,
             color: AppColors.white,
@@ -238,7 +239,7 @@ class _ProfileUpdatedDialog extends StatelessWidget {
             Text(
               'Profile Updated',
               style: TextStyle(
-                fontFamily: AppFonts.tactic,
+                fontFamily: AppFonts.arial,
                 fontSize: 22.sp,
                 fontWeight: FontWeight.w700,
                 color: AppColors.white,
@@ -265,7 +266,7 @@ class _ProfileUpdatedDialog extends StatelessWidget {
               'You have successfully update your profile.',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontFamily: AppFonts.satoshi,
+                fontFamily: AppFonts.arial,
                 fontSize: 14.sp,
                 height: 1.5,
                 color: AppColors.white.withValues(alpha: 0.65),
@@ -310,14 +311,14 @@ class _ProfileField extends StatelessWidget {
             child: TextField(
               cursorColor: AppColors.darkBlue,
               style: TextStyle(
-                fontFamily: AppFonts.satoshi,
+                fontFamily: AppFonts.arial,
                 fontSize: 14.sp,
                 color: AppColors.white,
               ),
               decoration: InputDecoration(
                 hintText: hintText,
                 hintStyle: TextStyle(
-                  fontFamily: AppFonts.satoshi,
+                  fontFamily: AppFonts.arial,
                   fontSize: 14.sp,
                   color: AppColors.white.withValues(alpha: 0.75),
                 ),
@@ -354,7 +355,7 @@ class _VerifiedBadge extends StatelessWidget {
         Text(
           'Verified',
           style: TextStyle(
-            fontFamily: AppFonts.satoshi,
+            fontFamily: AppFonts.arial,
             fontSize: 13.sp,
             color: AppColors.white.withValues(alpha: 0.55),
           ),

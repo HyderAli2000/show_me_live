@@ -74,7 +74,7 @@ class _SendGiftConfirmDialog extends StatelessWidget {
               'Send ${gift.name}',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontFamily: AppFonts.tactic,
+                fontFamily: AppFonts.arial,
                 fontSize: 22.sp,
                 fontWeight: FontWeight.w700,
                 color: AppColors.white,
@@ -85,7 +85,7 @@ class _SendGiftConfirmDialog extends StatelessWidget {
               'Show your support to the performer',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontFamily: AppFonts.satoshi,
+                fontFamily: AppFonts.arial,
                 fontSize: 13.sp,
                 color: AppColors.white.withValues(alpha: 0.65),
               ),
@@ -95,7 +95,7 @@ class _SendGiftConfirmDialog extends StatelessWidget {
               '${gift.name} sent 🎉 (09) remaining',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontFamily: AppFonts.satoshi,
+                fontFamily: AppFonts.arial,
                 fontSize: 13.sp,
                 color: AppColors.white.withValues(alpha: 0.65),
               ),
@@ -136,7 +136,7 @@ class _DetailRow extends StatelessWidget {
         Text(
           label,
           style: TextStyle(
-            fontFamily: AppFonts.satoshi,
+            fontFamily: AppFonts.arial,
             fontSize: 14.sp,
             color: AppColors.white.withValues(alpha: 0.55),
           ),
@@ -145,7 +145,7 @@ class _DetailRow extends StatelessWidget {
         Text(
           value,
           style: TextStyle(
-            fontFamily: AppFonts.satoshi,
+            fontFamily: AppFonts.arial,
             fontSize: 14.sp,
             fontWeight: FontWeight.w600,
             color: AppColors.white,

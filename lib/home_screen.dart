@@ -94,7 +94,7 @@ class HomeScreen extends StatelessWidget {
                 Text(
                   'See All',
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 13.sp,
                     fontWeight: FontWeight.w500,
                     color: AppColors.white.withValues(alpha: 0.55),
@@ -177,7 +177,7 @@ class _SectionTitle extends StatelessWidget {
     return Text(
       title,
       style: TextStyle(
-        fontFamily: AppFonts.tactic,
+        fontFamily: AppFonts.arial,
         fontSize: 20.sp,
         fontWeight: FontWeight.w700,
         color: AppColors.white,
@@ -217,7 +217,7 @@ class _CategoryItem extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontFamily: AppFonts.satoshi,
+              fontFamily: AppFonts.arial,
               fontSize: 13.sp,
               fontWeight: FontWeight.w500,
               color: AppColors.white.withValues(alpha: 0.75),
@@ -279,7 +279,7 @@ class _EventCard extends StatelessWidget {
                     child: Text(
                       event.category,
                       style: TextStyle(
-                        fontFamily: AppFonts.satoshi,
+                        fontFamily: AppFonts.arial,
                         fontSize: 11.sp,
                         fontWeight: FontWeight.w600,
                         color: AppColors.primaryBlue,
@@ -299,7 +299,7 @@ class _EventCard extends StatelessWidget {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
-                      fontFamily: AppFonts.satoshi,
+                      fontFamily: AppFonts.arial,
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w500,
                       color: AppColors.white,
@@ -310,7 +310,7 @@ class _EventCard extends StatelessWidget {
                 Text(
                   event.price,
                   style: TextStyle(
-                    fontFamily: AppFonts.tactic,
+                    fontFamily: AppFonts.arial,
                     fontSize: 18.sp,
                     fontWeight: FontWeight.w700,
                     color: AppColors.primaryBlue,
@@ -332,7 +332,7 @@ class _EventCard extends StatelessWidget {
                 Text(
                   event.date,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 12.sp,
                     fontWeight: FontWeight.w400,
                     color: AppColors.white.withValues(alpha: 0.55),

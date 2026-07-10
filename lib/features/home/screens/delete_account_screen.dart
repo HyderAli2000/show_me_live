@@ -78,7 +78,7 @@ class _DeleteAccountScreenState extends State<DeleteAccountScreen> {
                         child: Text(
                           'Deleting your account is permanent and cannot be undone. All your data will be permanently removed.',
                           style: TextStyle(
-                            fontFamily: AppFonts.satoshi,
+                            fontFamily: AppFonts.arial,
                             fontSize: 13.sp,
                             height: 1.5,
                             color: AppColors.white.withValues(alpha: 0.6),
@@ -126,7 +126,7 @@ class _DeleteAccountScreenState extends State<DeleteAccountScreen> {
                                       child: Text(
                                         _reasons[index],
                                         style: TextStyle(
-                                          fontFamily: AppFonts.satoshi,
+                                          fontFamily: AppFonts.arial,
                                           fontSize: 14.sp,
                                           color: AppColors.white.withValues(
                                             alpha: 0.85,
@@ -159,7 +159,7 @@ class _DeleteAccountScreenState extends State<DeleteAccountScreen> {
                             maxLines: 4,
                             cursorColor: AppColors.white,
                             style: TextStyle(
-                              fontFamily: AppFonts.satoshi,
+                              fontFamily: AppFonts.arial,
                               fontSize: 14.sp,
                               color: AppColors.white,
                             ),
@@ -168,7 +168,7 @@ class _DeleteAccountScreenState extends State<DeleteAccountScreen> {
                               border: InputBorder.none,
                               hintText: 'Type your reason here...',
                               hintStyle: TextStyle(
-                                fontFamily: AppFonts.satoshi,
+                                fontFamily: AppFonts.arial,
                                 fontSize: 14.sp,
                                 color: AppColors.white.withValues(alpha: 0.5),
                               ),
@@ -186,7 +186,7 @@ class _DeleteAccountScreenState extends State<DeleteAccountScreen> {
                             Text(
                               'To confirm deletion, please enter your password for',
                               style: TextStyle(
-                                fontFamily: AppFonts.satoshi,
+                                fontFamily: AppFonts.arial,
                                 fontSize: 13.sp,
                                 height: 1.45,
                                 color: AppColors.white.withValues(alpha: 0.6),
@@ -196,7 +196,7 @@ class _DeleteAccountScreenState extends State<DeleteAccountScreen> {
                             Text(
                               _email,
                               style: TextStyle(
-                                fontFamily: AppFonts.satoshi,
+                                fontFamily: AppFonts.arial,
                                 fontSize: 13.sp,
                                 color: AppColors.white.withValues(alpha: 0.45),
                               ),
@@ -238,7 +238,7 @@ class _DeleteAccountScreenState extends State<DeleteAccountScreen> {
                                   Text(
                                     'Incorrect password. Please try again',
                                     style: TextStyle(
-                                      fontFamily: AppFonts.satoshi,
+                                      fontFamily: AppFonts.arial,
                                       fontSize: 12.sp,
                                       color: AppColors.white.withValues(
                                         alpha: 0.55,
@@ -314,7 +314,7 @@ class _DeleteAccountDialog extends StatelessWidget {
             Text(
               'Delete Account',
               style: TextStyle(
-                fontFamily: AppFonts.tactic,
+                fontFamily: AppFonts.arial,
                 fontSize: 22.sp,
                 fontWeight: FontWeight.w700,
                 color: AppColors.white,
@@ -340,7 +340,7 @@ class _DeleteAccountDialog extends StatelessWidget {
               'Are you sure you want to delete your account',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontFamily: AppFonts.satoshi,
+                fontFamily: AppFonts.arial,
                 fontSize: 14.sp,
                 height: 1.5,
                 color: AppColors.white.withValues(alpha: 0.65),
@@ -365,7 +365,7 @@ class _DeleteAccountDialog extends StatelessWidget {
                       child: Text(
                         'No',
                         style: TextStyle(
-                          fontFamily: AppFonts.satoshi,
+                          fontFamily: AppFonts.arial,
                           fontSize: 15.sp,
                           fontWeight: FontWeight.w700,
                           color: AppColors.white,
@@ -409,7 +409,7 @@ class _SectionBlock extends StatelessWidget {
         Text(
           title,
           style: TextStyle(
-            fontFamily: AppFonts.satoshi,
+            fontFamily: AppFonts.arial,
             fontSize: 15.sp,
             fontWeight: FontWeight.w700,
             color: AppColors.white,

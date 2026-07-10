@@ -57,7 +57,7 @@ class _LogoutDialog extends StatelessWidget {
             Text(
               'Logout',
               style: TextStyle(
-                fontFamily: AppFonts.tactic,
+                fontFamily: AppFonts.arial,
                 fontSize: 22.sp,
                 fontWeight: FontWeight.w700,
                 color: AppColors.white,
@@ -82,7 +82,7 @@ class _LogoutDialog extends StatelessWidget {
               'Are you sure you want to logout your account',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontFamily: AppFonts.satoshi,
+                fontFamily: AppFonts.arial,
                 fontSize: 14.sp,
                 height: 1.5,
                 color: AppColors.white.withValues(alpha: 0.65),
@@ -107,7 +107,7 @@ class _LogoutDialog extends StatelessWidget {
                       child: Text(
                         'No',
                         style: TextStyle(
-                          fontFamily: AppFonts.satoshi,
+                          fontFamily: AppFonts.arial,
                           fontSize: 15.sp,
                           fontWeight: FontWeight.w700,
                           color: AppColors.white,

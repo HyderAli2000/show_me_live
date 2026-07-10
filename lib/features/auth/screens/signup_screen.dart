@@ -31,6 +31,7 @@ class _SignupScreenState extends State<SignupScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        leadingWidth: 70.w,
         leading: GestureDetector(
           onTap: () => Get.back(),
           child: Container(
@@ -80,7 +81,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         Text(
                           'Sign up',
                           style: TextStyle(
-                            fontFamily: AppFonts.tactic,
+                            fontFamily: AppFonts.arial,
                             fontSize: 26.sp,
                             fontWeight: FontWeight.w700,
                             color: AppColors.white,
@@ -90,7 +91,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         Text(
                           'Enter your Credentials',
                           style: TextStyle(
-                            fontFamily: AppFonts.satoshi,
+                            fontFamily: AppFonts.arial,
                             fontSize: 13.sp,
                             fontWeight: FontWeight.w400,
                             color: AppColors.white.withValues(alpha: 0.55),
@@ -139,7 +140,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 textAlign: TextAlign.center,
                                 text: TextSpan(
                                   style: TextStyle(
-                                    fontFamily: AppFonts.satoshi,
+                                    fontFamily: AppFonts.arial,
                                     fontSize: 13.sp,
                                     color: AppColors.white.withValues(
                                       alpha: 0.65,
@@ -222,7 +223,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   textAlign: TextAlign.center,
                   text: TextSpan(
                     style: TextStyle(
-                      fontFamily: AppFonts.satoshi,
+                      fontFamily: AppFonts.arial,
                       fontSize: 14.sp,
                       color: AppColors.white.withValues(alpha: 0.55),
                     ),

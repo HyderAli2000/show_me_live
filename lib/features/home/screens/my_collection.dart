@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:show_me_live/core/theme/app_colors.dart';
 import 'package:show_me_live/core/theme/app_fonts.dart';
 import 'package:show_me_live/core/theme/assets_images.dart';
-import 'package:show_me_live/core/widgets/app_background.dart';
 import 'package:show_me_live/features/home/models/gift_item.dart';
 import 'package:show_me_live/features/home/screens/wallet_screen.dart';
 import 'package:show_me_live/features/home/widgets/send_gift_bottom_sheet.dart';
@@ -57,6 +56,7 @@ class _MyCollectionScreenState extends State<MyCollectionScreen> {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
+          leadingWidth: 70.w,
           leading: GestureDetector(
             onTap: () => Get.back(),
             child: Container(
@@ -76,7 +76,7 @@ class _MyCollectionScreenState extends State<MyCollectionScreen> {
           title: Text(
             'My Collections',
             style: TextStyle(
-              fontFamily: AppFonts.tactic,
+              fontFamily: AppFonts.arial,
               fontSize: 18.sp,
               fontWeight: FontWeight.w700,
               color: AppColors.white,
@@ -118,7 +118,7 @@ class _MyCollectionScreenState extends State<MyCollectionScreen> {
                                     TextSpan(
                                       text: '03 ',
                                       style: TextStyle(
-                                        fontFamily: AppFonts.satoshi,
+                                        fontFamily: AppFonts.arial,
                                         fontSize: 32.sp,
                                         fontWeight: FontWeight.w700,
                                         color: AppColors.white,
@@ -127,7 +127,7 @@ class _MyCollectionScreenState extends State<MyCollectionScreen> {
                                     TextSpan(
                                       text: 'Packs',
                                       style: TextStyle(
-                                        fontFamily: AppFonts.satoshi,
+                                        fontFamily: AppFonts.arial,
                                         fontSize: 18.sp,
                                         fontWeight: FontWeight.w500,
                                         color: AppColors.white,
@@ -140,7 +140,7 @@ class _MyCollectionScreenState extends State<MyCollectionScreen> {
                               Text(
                                 'Your Collections',
                                 style: TextStyle(
-                                  fontFamily: AppFonts.satoshi,
+                                  fontFamily: AppFonts.arial,
                                   fontSize: 14.sp,
                                   color: AppColors.white,
                                   fontWeight: FontWeight.w600,
@@ -181,7 +181,7 @@ class _MyCollectionScreenState extends State<MyCollectionScreen> {
                 Text(
                   'My Stickers',
                   style: TextStyle(
-                    fontFamily: AppFonts.tactic,
+                    fontFamily: AppFonts.arial,
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w700,
                     color: AppColors.white,

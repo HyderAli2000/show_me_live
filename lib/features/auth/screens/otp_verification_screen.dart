@@ -82,6 +82,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
+          leadingWidth: 70.w,
           leading: GestureDetector(
             onTap: () => Get.back(),
             child: Container(
@@ -131,7 +132,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                       Text(
                         'OTP Verification',
                         style: TextStyle(
-                          fontFamily: AppFonts.tactic,
+                          fontFamily: AppFonts.arial,
                           fontSize: 22.sp,
                           fontWeight: FontWeight.w700,
                           color: AppColors.white,
@@ -141,7 +142,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                       Text(
                         'We have sent you an email containing 6 digits\nverification code. Please enter the code to verify your identity',
                         style: TextStyle(
-                          fontFamily: AppFonts.satoshi,
+                          fontFamily: AppFonts.arial,
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w400,
                           color: AppColors.white.withValues(alpha: 0.55),
@@ -186,7 +187,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                         ),
                         cursorColor: AppColors.darkBlue,
                         textStyle: TextStyle(
-                          fontFamily: AppFonts.tactic,
+                          fontFamily: AppFonts.arial,
                           fontSize: 20.sp,
                           fontWeight: FontWeight.w600,
                           color: AppColors.white,
@@ -212,7 +213,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                           strokeWidth: 6.0,
                           strokeCap: StrokeCap.round,
                           textStyle: TextStyle(
-                            fontFamily: AppFonts.tactic,
+                            fontFamily: AppFonts.arial,
                             fontSize: 18.sp,
                             color: AppColors.white,
                             fontWeight: FontWeight.w700,
@@ -242,7 +243,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                       Text(
                         "Didn't received the code?",
                         style: TextStyle(
-                          fontFamily: AppFonts.satoshi,
+                          fontFamily: AppFonts.arial,
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w400,
                           color: AppColors.white.withValues(alpha: 0.55),
@@ -254,7 +255,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                         child: Text(
                           'Resend',
                           style: TextStyle(
-                            fontFamily: AppFonts.satoshi,
+                            fontFamily: AppFonts.arial,
                             fontSize: 14.sp,
                             fontWeight: FontWeight.w600,
                             color: AppColors.white.withValues(

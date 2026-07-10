@@ -60,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         Text(
                           'Login',
                           style: TextStyle(
-                            fontFamily: AppFonts.tactic,
+                            fontFamily: AppFonts.arial,
                             fontSize: 26.sp,
                             fontWeight: FontWeight.w700,
                             color: AppColors.white,
@@ -70,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         Text(
                           'Enter your Credentials',
                           style: TextStyle(
-                            fontFamily: AppFonts.satoshi,
+                            fontFamily: AppFonts.arial,
                             fontSize: 13.sp,
                             fontWeight: FontWeight.w400,
                             color: AppColors.white.withValues(alpha: 0.55),
@@ -104,7 +104,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             Text(
                               'Remember me',
                               style: TextStyle(
-                                fontFamily: AppFonts.satoshi,
+                                fontFamily: AppFonts.arial,
                                 fontSize: 13.sp,
                                 color: AppColors.white.withValues(alpha: 0.35),
                               ),
@@ -117,7 +117,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               child: Text(
                                 'Forgot Password?',
                                 style: TextStyle(
-                                  fontFamily: AppFonts.satoshi,
+                                  fontFamily: AppFonts.arial,
                                   fontSize: 13.sp,
                                   color: AppColors.white.withValues(
                                     alpha: 0.55,
@@ -145,7 +145,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             textAlign: TextAlign.center,
                             text: TextSpan(
                               style: TextStyle(
-                                fontFamily: AppFonts.satoshi,
+                                fontFamily: AppFonts.arial,
                                 fontSize: 12.5.sp,
                                 color: AppColors.white.withValues(alpha: 0.55),
                               ),
@@ -183,7 +183,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               child: Text(
                                 'Or',
                                 style: TextStyle(
-                                  fontFamily: AppFonts.satoshi,
+                                  fontFamily: AppFonts.arial,
                                   fontSize: 22.sp,
                                   color: AppColors.white,
                                 ),
@@ -223,7 +223,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       Text(
                                         'With Apple',
                                         style: TextStyle(
-                                          fontFamily: AppFonts.satoshi,
+                                          fontFamily: AppFonts.arial,
                                           fontSize: 13.sp,
                                           fontWeight: FontWeight.w600,
                                           color: AppColors.white,
@@ -261,7 +261,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       Text(
                                         'With Google',
                                         style: TextStyle(
-                                          fontFamily: AppFonts.satoshi,
+                                          fontFamily: AppFonts.arial,
                                           fontSize: 13.sp,
                                           fontWeight: FontWeight.w600,
                                           color: AppColors.white,
@@ -285,7 +285,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Text(
                   'By signing up you agree to our',
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 11.5.sp,
                     color: AppColors.white.withValues(alpha: 0.62),
                   ),
@@ -296,7 +296,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 textAlign: TextAlign.center,
                 text: TextSpan(
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 13.sp,
                     color: AppColors.white.withValues(alpha: 0.62),
                     height: 1.25,

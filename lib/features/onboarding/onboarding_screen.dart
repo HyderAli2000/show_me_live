@@ -62,6 +62,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       backgroundColor: AppColors.backgroundDark,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        leadingWidth: 70.w,
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -69,7 +70,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         title: Text(
           'Onboarding',
           style: TextStyle(
-            fontFamily: AppFonts.satoshi,
+            fontFamily: AppFonts.arial,
             fontSize: 16.sp,
             fontWeight: FontWeight.w500,
             color: AppColors.white,
@@ -81,7 +82,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             child: Text(
               'Skip',
               style: TextStyle(
-                fontFamily: AppFonts.satoshi,
+                fontFamily: AppFonts.arial,
                 fontSize: 16.sp,
                 fontWeight: FontWeight.w500,
                 color: AppColors.white,

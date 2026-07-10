@@ -28,7 +28,7 @@ class OnboardingPage extends StatelessWidget {
             item.title,
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontFamily: AppFonts.tactic,
+              fontFamily: AppFonts.arial,
               fontSize: 20.sp,
               fontWeight: FontWeight.w700,
               color: AppColors.white,
@@ -41,7 +41,7 @@ class OnboardingPage extends StatelessWidget {
             item.description,
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontFamily: AppFonts.satoshi,
+              fontFamily: AppFonts.arial,
               fontSize: 16.sp,
               fontWeight: FontWeight.w400,
               color: AppColors.white.withValues(alpha: 0.45),

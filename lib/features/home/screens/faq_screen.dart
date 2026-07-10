@@ -47,7 +47,7 @@ class _FaqScreenState extends State<FaqScreen> {
                 Text(
                   'Frequently Asked\nQuestions:',
                   style: TextStyle(
-                    fontFamily: AppFonts.tactic,
+                    fontFamily: AppFonts.arial,
                     fontSize: 26.sp,
                     fontWeight: FontWeight.w700,
                     color: AppColors.white,
@@ -113,7 +113,7 @@ class _FaqItem extends StatelessWidget {
                     child: Text(
                       question,
                       style: TextStyle(
-                        fontFamily: AppFonts.satoshi,
+                        fontFamily: AppFonts.arial,
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w500,
                         color: AppColors.white.withValues(
@@ -140,7 +140,7 @@ class _FaqItem extends StatelessWidget {
               child: Text(
                 answer,
                 style: TextStyle(
-                  fontFamily: AppFonts.satoshi,
+                  fontFamily: AppFonts.arial,
                   fontSize: 13.sp,
                   height: 1.5,
                   color: AppColors.white.withValues(alpha: 0.85),

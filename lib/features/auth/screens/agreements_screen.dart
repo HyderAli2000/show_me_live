@@ -37,6 +37,7 @@ class _AgreementsScreenState extends State<AgreementsScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        leadingWidth: 70.w,
         leading: GestureDetector(
           onTap: () => Get.back(),
           child: Container(
@@ -56,7 +57,7 @@ class _AgreementsScreenState extends State<AgreementsScreen> {
         title: Text(
           'Agreements',
           style: TextStyle(
-            fontFamily: AppFonts.tactic,
+            fontFamily: AppFonts.arial,
             fontSize: 18.sp,
             fontWeight: FontWeight.w700,
             color: AppColors.white,
@@ -105,7 +106,7 @@ class _AgreementsScreenState extends State<AgreementsScreen> {
                       Text(
                         bodyText,
                         style: TextStyle(
-                          fontFamily: AppFonts.satoshi,
+                          fontFamily: AppFonts.arial,
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w400,
                           color: AppColors.white.withValues(alpha: 0.46),
@@ -140,7 +141,7 @@ class _AgreementsScreenState extends State<AgreementsScreen> {
               label,
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontFamily: AppFonts.satoshi,
+                fontFamily: AppFonts.arial,
                 fontSize: 16.sp,
                 fontWeight: isActive ? FontWeight.w700 : FontWeight.w500,
                 color: isActive

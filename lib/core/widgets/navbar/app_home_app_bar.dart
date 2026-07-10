@@ -76,7 +76,7 @@ class AppHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
                       Text(
                         'Welcome Back',
                         style: TextStyle(
-                          fontFamily: AppFonts.satoshi,
+                          fontFamily: AppFonts.arial,
                           fontSize: 13.sp,
                           fontWeight: FontWeight.w400,
                           color: AppColors.white.withValues(alpha: 0.7),
@@ -86,7 +86,7 @@ class AppHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
                       Text(
                         userName,
                         style: TextStyle(
-                          fontFamily: AppFonts.tactic,
+                          fontFamily: AppFonts.arial,
                           fontSize: 20.sp,
                           fontWeight: FontWeight.w700,
                           color: AppColors.white,
@@ -157,7 +157,7 @@ class AppHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
                             Text(
                               'Search creator...',
                               style: TextStyle(
-                                fontFamily: AppFonts.satoshi,
+                                fontFamily: AppFonts.arial,
                                 fontSize: 14.sp,
                                 color: AppColors.white.withValues(alpha: 0.45),
                               ),

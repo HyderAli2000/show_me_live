@@ -52,7 +52,7 @@ class PermissionView extends StatelessWidget {
                           title,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontFamily: AppFonts.tactic,
+                            fontFamily: AppFonts.arial,
                             fontSize: 24.sp,
                             fontWeight: FontWeight.w700,
                             color: AppColors.white,
@@ -63,7 +63,7 @@ class PermissionView extends StatelessWidget {
                           description,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontFamily: AppFonts.satoshi,
+                            fontFamily: AppFonts.arial,
                             fontSize: 14.sp,
                             height: 1.5,
                             color: AppColors.white.withValues(alpha: 0.6),

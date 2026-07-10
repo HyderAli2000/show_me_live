@@ -48,6 +48,7 @@ class NotificationsScreen extends StatelessWidget {
       backgroundColor: Colors.transparent,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        leadingWidth: 70.w,
         backgroundColor: Colors.transparent,
         elevation: 0,
         automaticallyImplyLeading: false,
@@ -55,7 +56,7 @@ class NotificationsScreen extends StatelessWidget {
         title: Text(
           'Notifications',
           style: TextStyle(
-            fontFamily: AppFonts.tactic,
+            fontFamily: AppFonts.arial,
             fontSize: 21.sp,
             fontWeight: FontWeight.w700,
             color: AppColors.white,
@@ -137,7 +138,7 @@ class _NotificationCard extends StatelessWidget {
                 child: Text(
                   item.title,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 15.sp,
                     fontWeight: FontWeight.w700,
                     color: AppColors.white,
@@ -148,7 +149,7 @@ class _NotificationCard extends StatelessWidget {
               Text(
                 item.time,
                 style: TextStyle(
-                  fontFamily: AppFonts.satoshi,
+                  fontFamily: AppFonts.arial,
                   fontSize: 13.sp,
                   fontWeight: FontWeight.w600,
                   color: AppColors.buttonBlue,
@@ -160,7 +161,7 @@ class _NotificationCard extends StatelessWidget {
           Text(
             item.description,
             style: TextStyle(
-              fontFamily: AppFonts.satoshi,
+              fontFamily: AppFonts.arial,
               fontSize: 13.sp,
               height: 1.45,
               color: AppColors.white.withValues(alpha: 0.5),

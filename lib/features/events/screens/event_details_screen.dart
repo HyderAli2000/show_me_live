@@ -56,7 +56,7 @@ class EventDetailsScreen extends StatelessWidget {
                             child: Text(
                               event.title,
                               style: TextStyle(
-                                fontFamily: AppFonts.satoshi,
+                                fontFamily: AppFonts.arial,
                                 fontSize: 18.sp,
                                 fontWeight: FontWeight.w600,
                                 height: 1.35,
@@ -68,7 +68,7 @@ class EventDetailsScreen extends StatelessWidget {
                           Text(
                             event.price,
                             style: TextStyle(
-                              fontFamily: AppFonts.tactic,
+                              fontFamily: AppFonts.arial,
                               fontSize: 22.sp,
                               fontWeight: FontWeight.w700,
                               color: AppColors.primaryBlue,
@@ -80,7 +80,7 @@ class EventDetailsScreen extends StatelessWidget {
                       Text(
                         event.description,
                         style: TextStyle(
-                          fontFamily: AppFonts.satoshi,
+                          fontFamily: AppFonts.arial,
                           fontSize: 14.sp,
                           height: 1.55,
                           color: AppColors.white.withValues(alpha: 0.65),
@@ -118,7 +118,7 @@ class EventDetailsScreen extends StatelessWidget {
                       Text(
                         event.price,
                         style: TextStyle(
-                          fontFamily: AppFonts.tactic,
+                          fontFamily: AppFonts.arial,
                           fontSize: 24.sp,
                           fontWeight: FontWeight.w700,
                           color: AppColors.primaryBlue,
@@ -175,7 +175,7 @@ class _InfoRow extends StatelessWidget {
               Text(
                 label,
                 style: TextStyle(
-                  fontFamily: AppFonts.satoshi,
+                  fontFamily: AppFonts.arial,
                   fontSize: 13.sp,
                   fontWeight: FontWeight.w500,
                   color: AppColors.white.withValues(alpha: 0.55),
@@ -185,7 +185,7 @@ class _InfoRow extends StatelessWidget {
               Text(
                 value,
                 style: TextStyle(
-                  fontFamily: AppFonts.satoshi,
+                  fontFamily: AppFonts.arial,
                   fontSize: 15.sp,
                   fontWeight: FontWeight.w600,
                   color: AppColors.white,

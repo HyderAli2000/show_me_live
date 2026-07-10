@@ -20,6 +20,7 @@ class ChatSupportScreen extends StatelessWidget {
       extendBodyBehindAppBar: true,
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
+        leadingWidth: 70.w,
         backgroundColor: Colors.transparent,
         elevation: 0,
         automaticallyImplyLeading: false,
@@ -67,7 +68,7 @@ class ChatSupportScreen extends StatelessWidget {
                   Text(
                     'Chat',
                     style: TextStyle(
-                      fontFamily: AppFonts.tactic,
+                      fontFamily: AppFonts.arial,
                       fontSize: 18.sp,
                       fontWeight: FontWeight.w700,
                       height: 1.1,
@@ -77,7 +78,7 @@ class ChatSupportScreen extends StatelessWidget {
                   Text(
                     'Support',
                     style: TextStyle(
-                      fontFamily: AppFonts.tactic,
+                      fontFamily: AppFonts.arial,
                       fontSize: 18.sp,
                       fontWeight: FontWeight.w700,
                       height: 1.1,
@@ -178,7 +179,7 @@ class _ChatBubble extends StatelessWidget {
             child: Text(
               message,
               style: TextStyle(
-                fontFamily: AppFonts.satoshi,
+                fontFamily: AppFonts.arial,
                 fontSize: 13.sp,
                 height: 1.4,
                 color: AppColors.white.withValues(alpha: 0.85),
@@ -189,7 +190,7 @@ class _ChatBubble extends StatelessWidget {
           Text(
             time,
             style: TextStyle(
-              fontFamily: AppFonts.satoshi,
+              fontFamily: AppFonts.arial,
               fontSize: 11.sp,
               color: AppColors.white.withValues(alpha: 0.5),
             ),
@@ -224,7 +225,7 @@ class _MessageInput extends StatelessWidget {
             child: TextField(
               cursorColor: AppColors.white,
               style: TextStyle(
-                fontFamily: AppFonts.satoshi,
+                fontFamily: AppFonts.arial,
                 fontSize: 14.sp,
                 color: Color(0xffFFFFFF).withValues(alpha: 0.2),
               ),
@@ -237,7 +238,7 @@ class _MessageInput extends StatelessWidget {
                 ),
                 hintText: 'Write your message...',
                 hintStyle: TextStyle(
-                  fontFamily: AppFonts.satoshi,
+                  fontFamily: AppFonts.arial,
                   fontSize: 14.sp,
                   color: AppColors.white.withValues(alpha: 0.5),
                 ),

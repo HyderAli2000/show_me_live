@@ -10,7 +10,6 @@ import 'package:show_me_live/features/home/models/gift_item.dart';
 import 'package:show_me_live/features/home/screens/my_collection.dart';
 import 'package:show_me_live/features/home/widgets/gift_purchase_flow.dart';
 import 'package:show_me_live/features/home/widgets/send_gift_bottom_sheet.dart';
-import 'package:show_me_live/features/home/widgets/send_gift_confirm_dialog.dart';
 
 class WalletScreen extends StatefulWidget {
   const WalletScreen({super.key});
@@ -170,9 +169,9 @@ class _BalanceCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            '\$185',
+            '\$184',
             style: TextStyle(
-              fontFamily: AppFonts.tactic,
+              fontFamily: AppFonts.arial,
               fontSize: 40.sp,
               fontWeight: FontWeight.w700,
               color: AppColors.white,
@@ -182,7 +181,7 @@ class _BalanceCard extends StatelessWidget {
           Text(
             'Amount Available',
             style: TextStyle(
-              fontFamily: AppFonts.satoshi,
+              fontFamily: AppFonts.arial,
               fontSize: 16.sp,
               fontWeight: FontWeight.w600,
               color: AppColors.white,
@@ -231,7 +230,7 @@ class _WalletSegmentedTabBar extends StatelessWidget {
                   tabs[index],
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w700,
                     color: selected
@@ -281,7 +280,7 @@ class _TransactionsTab extends StatelessWidget {
                     Text(
                       'Search...',
                       style: TextStyle(
-                        fontFamily: AppFonts.satoshi,
+                        fontFamily: AppFonts.arial,
                         fontSize: 14.sp,
                         color: AppColors.white.withValues(alpha: 0.45),
                       ),
@@ -364,7 +363,7 @@ class _StoreTab extends StatelessWidget {
                               TextSpan(
                                 text: '03 ',
                                 style: TextStyle(
-                                  fontFamily: AppFonts.satoshi,
+                                  fontFamily: AppFonts.arial,
                                   fontSize: 32.sp,
                                   fontWeight: FontWeight.w700,
                                   color: AppColors.white,
@@ -373,7 +372,7 @@ class _StoreTab extends StatelessWidget {
                               TextSpan(
                                 text: 'Packs',
                                 style: TextStyle(
-                                  fontFamily: AppFonts.satoshi,
+                                  fontFamily: AppFonts.arial,
                                   fontSize: 18.sp,
                                   fontWeight: FontWeight.w500,
                                   color: AppColors.white,
@@ -386,7 +385,7 @@ class _StoreTab extends StatelessWidget {
                         Text(
                           'Your Collections',
                           style: TextStyle(
-                            fontFamily: AppFonts.satoshi,
+                            fontFamily: AppFonts.arial,
                             fontSize: 14.sp,
                             color: AppColors.white,
                             fontWeight: FontWeight.w600,
@@ -428,7 +427,7 @@ class _StoreTab extends StatelessWidget {
         Text(
           'Buy Sticker Packs',
           style: TextStyle(
-            fontFamily: AppFonts.tactic,
+            fontFamily: AppFonts.arial,
             fontSize: 16.sp,
             fontWeight: FontWeight.w700,
             color: AppColors.white,
@@ -461,6 +460,7 @@ class _StoreTab extends StatelessWidget {
 
 class CollectionPreview extends StatelessWidget {
   const CollectionPreview({
+    super.key,
     required this.color,
     required this.image,
     required this.size,
@@ -524,7 +524,7 @@ class _TransactionCard extends StatelessWidget {
                 Text(
                   item.description,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w600,
                     color: Color(0xff6155F9),
@@ -534,7 +534,7 @@ class _TransactionCard extends StatelessWidget {
                 Text(
                   item.date,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 14.sp,
                     color: AppColors.white.withValues(alpha: 0.45),
                   ),
@@ -545,7 +545,7 @@ class _TransactionCard extends StatelessWidget {
           Text(
             item.status,
             style: TextStyle(
-              fontFamily: AppFonts.satoshi,
+              fontFamily: AppFonts.arial,
               fontSize: 14.sp,
               color: AppColors.white,
             ),

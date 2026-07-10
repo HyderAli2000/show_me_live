@@ -91,7 +91,7 @@ class _LiveStreamScreenState extends State<LiveStreamScreen> {
                               child: Text(
                                 'Live',
                                 style: TextStyle(
-                                  fontFamily: AppFonts.satoshi,
+                                  fontFamily: AppFonts.arial,
                                   fontSize: 12.sp,
                                   fontWeight: FontWeight.w700,
                                   color: AppColors.white,
@@ -102,7 +102,7 @@ class _LiveStreamScreenState extends State<LiveStreamScreen> {
                             Text(
                               widget.title ?? 'Lorem ipsum dolor sit amet.',
                               style: TextStyle(
-                                fontFamily: AppFonts.satoshi,
+                                fontFamily: AppFonts.arial,
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w500,
                                 color: AppColors.white,
@@ -120,7 +120,7 @@ class _LiveStreamScreenState extends State<LiveStreamScreen> {
                                 Text(
                                   '1.9k',
                                   style: TextStyle(
-                                    fontFamily: AppFonts.satoshi,
+                                    fontFamily: AppFonts.arial,
                                     fontSize: 13.sp,
                                     fontWeight: FontWeight.w600,
                                     color: AppColors.white,
@@ -154,7 +154,7 @@ class _LiveStreamScreenState extends State<LiveStreamScreen> {
                                   child: TextField(
                                     cursorColor: AppColors.white,
                                     style: TextStyle(
-                                      fontFamily: AppFonts.satoshi,
+                                      fontFamily: AppFonts.arial,
                                       fontSize: 14.sp,
                                       color: AppColors.white,
                                     ),
@@ -172,7 +172,7 @@ class _LiveStreamScreenState extends State<LiveStreamScreen> {
                                       border: InputBorder.none,
                                       hintText: 'Send a Message',
                                       hintStyle: TextStyle(
-                                        fontFamily: AppFonts.satoshi,
+                                        fontFamily: AppFonts.arial,
                                         fontSize: 14.sp,
                                         color: AppColors.white.withValues(
                                           alpha: 0.55,
@@ -290,7 +290,7 @@ class _LiveStreamScreenState extends State<LiveStreamScreen> {
                               child: Text(
                                 'End Live',
                                 style: TextStyle(
-                                  fontFamily: AppFonts.satoshi,
+                                  fontFamily: AppFonts.arial,
                                   fontSize: 14.sp,
                                   fontWeight: FontWeight.w700,
                                   color: AppColors.white,
@@ -340,7 +340,7 @@ class _StatusPill extends StatelessWidget {
             Text(
               label,
               style: TextStyle(
-                fontFamily: AppFonts.satoshi,
+                fontFamily: AppFonts.arial,
                 fontSize: 13.sp,
                 fontWeight: FontWeight.w700,
                 color: AppColors.white,

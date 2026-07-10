@@ -5,10 +5,8 @@ import 'package:show_me_live/core/theme/app_colors.dart';
 import 'package:show_me_live/core/theme/app_fonts.dart';
 import 'package:show_me_live/core/theme/assets_icons.dart';
 import 'package:show_me_live/core/widgets/app_background.dart';
-import 'package:show_me_live/core/widgets/mobile_home_indicator.dart';
 import 'package:show_me_live/core/widgets/primary_button.dart';
 import 'package:show_me_live/features/permissions/screens/allow_location_screen.dart';
-import 'package:show_me_live/features/permissions/screens/allow_notification_screen.dart';
 
 class CreateProfileScreen extends StatelessWidget {
   const CreateProfileScreen({super.key});
@@ -21,6 +19,7 @@ class CreateProfileScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        leadingWidth: 70.w,
         leading: GestureDetector(
           onTap: () => Get.back(),
           child: Container(
@@ -41,7 +40,7 @@ class CreateProfileScreen extends StatelessWidget {
           'Create Profile',
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontFamily: AppFonts.tactic,
+            fontFamily: AppFonts.arial,
             fontSize: 21.sp,
             fontWeight: FontWeight.w700,
             color: AppColors.white,
@@ -197,14 +196,14 @@ class _ProfileField extends StatelessWidget {
             child: TextField(
               cursorColor: AppColors.darkBlue,
               style: TextStyle(
-                fontFamily: AppFonts.satoshi,
+                fontFamily: AppFonts.arial,
                 fontSize: 14.sp,
                 color: AppColors.white,
               ),
               decoration: InputDecoration(
                 hintText: hintText,
                 hintStyle: TextStyle(
-                  fontFamily: AppFonts.satoshi,
+                  fontFamily: AppFonts.arial,
                   fontSize: 14.sp,
                   color: AppColors.white,
                 ),
@@ -241,7 +240,7 @@ class _VerifiedBadge extends StatelessWidget {
         Text(
           'Verified',
           style: TextStyle(
-            fontFamily: AppFonts.satoshi,
+            fontFamily: AppFonts.arial,
             fontSize: 13.sp,
             color: AppColors.white.withValues(alpha: 0.55),
           ),

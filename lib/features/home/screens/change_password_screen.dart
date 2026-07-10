@@ -101,7 +101,7 @@ class _LabeledPasswordField extends StatelessWidget {
         Text(
           label,
           style: TextStyle(
-            fontFamily: AppFonts.satoshi,
+            fontFamily: AppFonts.arial,
             fontSize: 14.sp,
             fontWeight: FontWeight.w500,
             color: AppColors.white.withValues(alpha: 0.75),
@@ -120,7 +120,7 @@ class _LabeledPasswordField extends StatelessWidget {
           Text(
             helperText!,
             style: TextStyle(
-              fontFamily: AppFonts.satoshi,
+              fontFamily: AppFonts.arial,
               fontSize: 12.sp,
               color: AppColors.white.withValues(alpha: 0.45),
             ),
@@ -156,7 +156,7 @@ class _PasswordRequirementsBox extends StatelessWidget {
           Text(
             'Password must contain:',
             style: TextStyle(
-              fontFamily: AppFonts.satoshi,
+              fontFamily: AppFonts.arial,
               fontSize: 14.sp,
               fontWeight: FontWeight.w600,
               color: AppColors.white.withValues(alpha: 0.85),
@@ -172,7 +172,7 @@ class _PasswordRequirementsBox extends StatelessWidget {
                   Text(
                     '• ',
                     style: TextStyle(
-                      fontFamily: AppFonts.satoshi,
+                      fontFamily: AppFonts.arial,
                       fontSize: 14.sp,
                       color: AppColors.white.withValues(alpha: 0.65),
                     ),
@@ -181,7 +181,7 @@ class _PasswordRequirementsBox extends StatelessWidget {
                     child: Text(
                       item,
                       style: TextStyle(
-                        fontFamily: AppFonts.satoshi,
+                        fontFamily: AppFonts.arial,
                         fontSize: 13.sp,
                         color: AppColors.white.withValues(alpha: 0.65),
                       ),
@@ -260,7 +260,7 @@ class _PasswordChangedBanner extends StatelessWidget {
                       child: Text(
                         'Your password has been changed successfully. You can now login with your new password.',
                         style: TextStyle(
-                          fontFamily: AppFonts.satoshi,
+                          fontFamily: AppFonts.arial,
                           fontSize: 13.sp,
                           height: 1.45,
                           color: AppColors.white.withValues(alpha: 0.8),

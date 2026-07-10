@@ -21,6 +21,7 @@ class EventScreenAppBar extends StatelessWidget implements PreferredSizeWidget {
       scrolledUnderElevation: 0,
       surfaceTintColor: Colors.transparent,
       centerTitle: true,
+      leadingWidth: 70.w,
       leading: GestureDetector(
         onTap: () => Get.back(),
         child: Container(
@@ -39,7 +40,7 @@ class EventScreenAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(
         title,
         style: TextStyle(
-          fontFamily: AppFonts.tactic,
+          fontFamily: AppFonts.arial,
           fontSize: 20.sp,
           fontWeight: FontWeight.w700,
           color: AppColors.white,

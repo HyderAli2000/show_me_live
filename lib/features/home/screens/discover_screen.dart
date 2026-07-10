@@ -157,7 +157,7 @@ class _DiscoverEventCard extends StatelessWidget {
                       child: Text(
                         event.category,
                         style: TextStyle(
-                          fontFamily: AppFonts.satoshi,
+                          fontFamily: AppFonts.arial,
                           fontSize: 10.sp,
                           fontWeight: FontWeight.w600,
                           color: AppColors.primaryBlue,
@@ -178,7 +178,7 @@ class _DiscoverEventCard extends StatelessWidget {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
-                      fontFamily: AppFonts.satoshi,
+                      fontFamily: AppFonts.arial,
                       fontSize: 13.sp,
                       fontWeight: FontWeight.w500,
                       height: 1.3,
@@ -190,7 +190,7 @@ class _DiscoverEventCard extends StatelessWidget {
                 Text(
                   event.price,
                   style: TextStyle(
-                    fontFamily: AppFonts.tactic,
+                    fontFamily: AppFonts.arial,
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w700,
                     color: AppColors.primaryBlue,
@@ -215,7 +215,7 @@ class _DiscoverEventCard extends StatelessWidget {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
-                      fontFamily: AppFonts.satoshi,
+                      fontFamily: AppFonts.arial,
                       fontSize: 11.sp,
                       fontWeight: FontWeight.w400,
                       color: AppColors.white.withValues(alpha: 0.55),

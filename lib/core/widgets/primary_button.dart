@@ -56,7 +56,7 @@ class PrimaryButton extends StatelessWidget {
             : Text(
                 label,
                 style: TextStyle(
-                  fontFamily: AppFonts.satoshi,
+                  fontFamily: AppFonts.arial,
                   fontSize: 15.sp,
                   fontWeight: FontWeight.w700,
                   color: effectiveTextColor,

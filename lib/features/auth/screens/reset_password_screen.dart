@@ -7,31 +7,11 @@ import 'package:show_me_live/core/theme/assets_icons.dart';
 import 'package:show_me_live/core/theme/assets_images.dart';
 import 'package:show_me_live/core/widgets/app_background.dart';
 import 'package:show_me_live/core/widgets/app_text_field.dart';
-import 'package:show_me_live/core/widgets/mobile_home_indicator.dart';
 import 'package:show_me_live/core/widgets/primary_button.dart';
 import 'package:show_me_live/features/auth/screens/login_screen.dart';
 
 class ResetPasswordScreen extends StatelessWidget {
   const ResetPasswordScreen({super.key});
-
-  Widget _lockPrefixIcon() {
-    return Container(
-      width: 22.w,
-      height: 22.w,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        border: Border.all(color: AppColors.white.withValues(alpha: 0.35)),
-      ),
-      child: Center(
-        child: Image.asset(
-          AssetIcons.lock,
-          width: 12.w,
-          height: 12.w,
-          fit: BoxFit.contain,
-        ),
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +21,7 @@ class ResetPasswordScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        leadingWidth: 70.w,
         leading: GestureDetector(
           onTap: () => Get.back(),
           child: Container(
@@ -90,7 +71,7 @@ class ResetPasswordScreen extends StatelessWidget {
                         Text(
                           'Reset Password',
                           style: TextStyle(
-                            fontFamily: AppFonts.tactic,
+                            fontFamily: AppFonts.arial,
                             fontSize: 24.sp,
                             fontWeight: FontWeight.w700,
                             color: AppColors.white,
@@ -100,7 +81,7 @@ class ResetPasswordScreen extends StatelessWidget {
                         Text(
                           'Set new password',
                           style: TextStyle(
-                            fontFamily: AppFonts.satoshi,
+                            fontFamily: AppFonts.arial,
                             fontSize: 15.sp,
                             fontWeight: FontWeight.w400,
                             color: AppColors.white.withValues(alpha: 0.55),

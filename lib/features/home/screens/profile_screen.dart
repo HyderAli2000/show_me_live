@@ -6,7 +6,6 @@ import 'package:show_me_live/core/theme/app_colors.dart';
 import 'package:show_me_live/core/theme/app_fonts.dart';
 import 'package:show_me_live/core/theme/assets_images.dart';
 import 'package:show_me_live/core/widgets/primary_button.dart';
-import 'package:show_me_live/features/home/screens/account_settings_screen.dart';
 import 'package:show_me_live/features/home/screens/edit_profile.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -57,7 +56,7 @@ class ProfileScreen extends StatelessWidget {
                   _name,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontFamily: AppFonts.tactic,
+                    fontFamily: AppFonts.arial,
                     fontSize: 24.sp,
                     fontWeight: FontWeight.w700,
                     color: AppColors.white,
@@ -68,7 +67,7 @@ class ProfileScreen extends StatelessWidget {
                   _email,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 14.sp,
                     color: AppColors.white.withValues(alpha: 0.6),
                   ),
@@ -101,7 +100,7 @@ class ProfileScreen extends StatelessWidget {
                       Text(
                         'Address',
                         style: TextStyle(
-                          fontFamily: AppFonts.satoshi,
+                          fontFamily: AppFonts.arial,
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w600,
                           color: AppColors.white.withValues(alpha: 0.85),
@@ -112,7 +111,7 @@ class ProfileScreen extends StatelessWidget {
                         _address,
                         textAlign: TextAlign.left,
                         style: TextStyle(
-                          fontFamily: AppFonts.satoshi,
+                          fontFamily: AppFonts.arial,
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w500,
                           color: AppColors.white.withValues(alpha: 0.55),
@@ -182,7 +181,7 @@ class _ProfileInfoRow extends StatelessWidget {
             child: Text(
               label,
               style: TextStyle(
-                fontFamily: AppFonts.satoshi,
+                fontFamily: AppFonts.arial,
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w600,
                 color: AppColors.white.withValues(alpha: 0.85),
@@ -213,7 +212,7 @@ class _ProfileInfoRow extends StatelessWidget {
                           value,
                           textAlign: TextAlign.right,
                           style: TextStyle(
-                            fontFamily: AppFonts.satoshi,
+                            fontFamily: AppFonts.arial,
                             fontSize: 14.sp,
                             fontWeight: FontWeight.w500,
                             color: AppColors.white.withValues(alpha: 0.55),
@@ -226,7 +225,7 @@ class _ProfileInfoRow extends StatelessWidget {
                     value,
                     textAlign: TextAlign.right,
                     style: TextStyle(
-                      fontFamily: AppFonts.satoshi,
+                      fontFamily: AppFonts.arial,
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w500,
                       color: AppColors.white.withValues(alpha: 0.55),

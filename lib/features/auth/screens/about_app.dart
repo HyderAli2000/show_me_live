@@ -21,6 +21,7 @@ class _AboutAppState extends State<AboutApp> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        leadingWidth: 70.w,
         leading: GestureDetector(
           onTap: () => Get.back(),
           child: Container(
@@ -40,7 +41,7 @@ class _AboutAppState extends State<AboutApp> {
         title: Text(
           'About App',
           style: TextStyle(
-            fontFamily: AppFonts.tactic,
+            fontFamily: AppFonts.arial,
             fontSize: 18.sp,
             fontWeight: FontWeight.w700,
             color: AppColors.white,
@@ -64,7 +65,7 @@ class _AboutAppState extends State<AboutApp> {
                       Text(
                         'Lorem ipsum dolor sit amet consectetur.',
                         style: TextStyle(
-                          fontFamily: AppFonts.tactic,
+                          fontFamily: AppFonts.arial,
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w700,
                           color: AppColors.white,
@@ -74,7 +75,7 @@ class _AboutAppState extends State<AboutApp> {
                       Text(
                         _loremTerms,
                         style: TextStyle(
-                          fontFamily: AppFonts.satoshi,
+                          fontFamily: AppFonts.arial,
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w400,
                           color: AppColors.white.withValues(alpha: 0.46),
@@ -89,7 +90,7 @@ class _AboutAppState extends State<AboutApp> {
               Text(
                 "Show Me Live",
                 style: TextStyle(
-                  fontFamily: AppFonts.tactic,
+                  fontFamily: AppFonts.arial,
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w700,
                   color: Color(0xff6155F9),
@@ -99,7 +100,7 @@ class _AboutAppState extends State<AboutApp> {
               Text(
                 'Version 1.0.0',
                 style: TextStyle(
-                  fontFamily: AppFonts.satoshi,
+                  fontFamily: AppFonts.arial,
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w400,
                   color: AppColors.white.withValues(alpha: 0.46),

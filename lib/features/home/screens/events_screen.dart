@@ -275,7 +275,7 @@ class _PrimaryTabBar extends StatelessWidget {
                     tabs[index],
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontFamily: AppFonts.satoshi,
+                      fontFamily: AppFonts.arial,
                       fontSize: 15.sp,
                       fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
                       color: selected
@@ -344,7 +344,7 @@ class _SubTabBar extends StatelessWidget {
                 child: Text(
                   tabs[index],
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
+                    fontFamily: AppFonts.arial,
                     fontSize: 14.sp,
                     fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
                     color: AppColors.white.withValues(
@@ -403,7 +403,7 @@ class _EventListTile extends StatelessWidget {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
-                      fontFamily: AppFonts.satoshi,
+                      fontFamily: AppFonts.arial,
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w500,
                       height: 1.35,
@@ -424,7 +424,7 @@ class _EventListTile extends StatelessWidget {
                       Text(
                         event.date,
                         style: TextStyle(
-                          fontFamily: AppFonts.satoshi,
+                          fontFamily: AppFonts.arial,
                           fontSize: 12.sp,
                           color: AppColors.white.withValues(alpha: 0.55),
                         ),
@@ -438,7 +438,7 @@ class _EventListTile extends StatelessWidget {
             Text(
               event.price,
               style: TextStyle(
-                fontFamily: AppFonts.tactic,
+                fontFamily: AppFonts.arial,
                 fontSize: 18.sp,
                 fontWeight: FontWeight.w700,
                 color: AppColors.primaryBlue,

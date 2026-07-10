@@ -7,10 +7,8 @@ import 'package:show_me_live/core/theme/assets_icons.dart';
 import 'package:show_me_live/core/theme/assets_images.dart';
 import 'package:show_me_live/core/widgets/app_background.dart';
 import 'package:show_me_live/core/widgets/app_text_field.dart';
-import 'package:show_me_live/core/widgets/mobile_home_indicator.dart';
 import 'package:show_me_live/core/widgets/primary_button.dart';
 import 'package:show_me_live/features/auth/screens/otp_verification_screen.dart';
-import 'package:show_me_live/features/auth/screens/reset_password_screen.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
   const ForgotPasswordScreen({super.key});
@@ -23,6 +21,7 @@ class ForgotPasswordScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        leadingWidth: 70.w,
         leading: GestureDetector(
           onTap: () => Get.back(),
           child: Container(
@@ -72,7 +71,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                         Text(
                           'Forgot Password',
                           style: TextStyle(
-                            fontFamily: AppFonts.tactic,
+                            fontFamily: AppFonts.arial,
                             fontSize: 24.sp,
                             fontWeight: FontWeight.w700,
                             color: AppColors.white,
@@ -82,7 +81,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                         Text(
                           'Reset your password',
                           style: TextStyle(
-                            fontFamily: AppFonts.satoshi,
+                            fontFamily: AppFonts.arial,
                             fontSize: 15.sp,
                             fontWeight: FontWeight.w400,
                             color: AppColors.white.withValues(alpha: 0.55),

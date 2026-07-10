@@ -17,21 +17,7 @@ abstract final class AppTheme {
       ),
       appBarTheme: const AppBarTheme(surfaceTintColor: Colors.transparent),
       useMaterial3: true,
-      textTheme: const TextTheme().apply(fontFamily: AppFonts.satoshi),
-    );
-  }
-
-  /// Theme override for screens that use the Tactic display font.
-  static ThemeData tacticTheme(BuildContext context) {
-    return Theme.of(context).copyWith(
-      textTheme: Theme.of(context).textTheme.apply(fontFamily: AppFonts.tactic),
-      primaryTextTheme:
-          Theme.of(context).primaryTextTheme.apply(fontFamily: AppFonts.tactic),
-      appBarTheme: Theme.of(context).appBarTheme.copyWith(
-            titleTextStyle: Theme.of(context).appBarTheme.titleTextStyle?.copyWith(
-                  fontFamily: AppFonts.tactic,
-                ),
-          ),
+      textTheme: const TextTheme().apply(fontFamily: AppFonts.arial),
     );
   }
 }

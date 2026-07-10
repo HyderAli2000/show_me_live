@@ -13,10 +13,7 @@ class GiftPurchaseFlow {
   GiftPurchaseFlow._();
 
   static void showPaymentDialog({required GiftItem gift}) {
-    Get.dialog(
-      _GiftPaymentDialog(gift: gift),
-      barrierDismissible: true,
-    );
+    Get.dialog(_GiftPaymentDialog(gift: gift), barrierDismissible: true);
   }
 
   static void showSuccessScreen({required GiftItem gift}) {
@@ -82,7 +79,7 @@ class _GiftPaymentDialogState extends State<_GiftPaymentDialog> {
                         Text(
                           'Payment Method',
                           style: TextStyle(
-                            fontFamily: AppFonts.tactic,
+                            fontFamily: AppFonts.arial,
                             fontSize: 22.sp,
                             fontWeight: FontWeight.w700,
                             color: AppColors.white,
@@ -92,7 +89,7 @@ class _GiftPaymentDialogState extends State<_GiftPaymentDialog> {
                         Text(
                           'Complete your gift purchase',
                           style: TextStyle(
-                            fontFamily: AppFonts.satoshi,
+                            fontFamily: AppFonts.arial,
                             fontSize: 13.sp,
                             height: 1.4,
                             color: AppColors.white.withValues(alpha: 0.55),
@@ -127,7 +124,7 @@ class _GiftPaymentDialogState extends State<_GiftPaymentDialog> {
                     Text(
                       'Total Amount:',
                       style: TextStyle(
-                        fontFamily: AppFonts.satoshi,
+                        fontFamily: AppFonts.arial,
                         fontSize: 14.sp,
                         color: AppColors.white.withValues(alpha: 0.75),
                       ),
@@ -136,7 +133,7 @@ class _GiftPaymentDialogState extends State<_GiftPaymentDialog> {
                     Text(
                       amount,
                       style: TextStyle(
-                        fontFamily: AppFonts.tactic,
+                        fontFamily: AppFonts.arial,
                         fontSize: 20.sp,
                         fontWeight: FontWeight.w700,
                         color: AppColors.white,
@@ -149,7 +146,7 @@ class _GiftPaymentDialogState extends State<_GiftPaymentDialog> {
               Text(
                 'Saved Payment Methods',
                 style: TextStyle(
-                  fontFamily: AppFonts.satoshi,
+                  fontFamily: AppFonts.arial,
                   fontSize: 12.sp,
                   fontWeight: FontWeight.w600,
                   letterSpacing: 0.4,
@@ -178,7 +175,7 @@ class _GiftPaymentDialogState extends State<_GiftPaymentDialog> {
               Text(
                 'Quick Pay',
                 style: TextStyle(
-                  fontFamily: AppFonts.satoshi,
+                  fontFamily: AppFonts.arial,
                   fontSize: 12.sp,
                   fontWeight: FontWeight.w600,
                   letterSpacing: 0.4,
@@ -266,7 +263,7 @@ class _SavedPaymentTile extends StatelessWidget {
               child: Text(
                 brandLabel,
                 style: TextStyle(
-                  fontFamily: AppFonts.satoshi,
+                  fontFamily: AppFonts.arial,
                   fontSize: 10.sp,
                   fontWeight: FontWeight.w800,
                   color: brandColor,
@@ -281,7 +278,7 @@ class _SavedPaymentTile extends StatelessWidget {
                   Text(
                     title,
                     style: TextStyle(
-                      fontFamily: AppFonts.satoshi,
+                      fontFamily: AppFonts.arial,
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w600,
                       color: AppColors.white,
@@ -291,7 +288,7 @@ class _SavedPaymentTile extends StatelessWidget {
                   Text(
                     subtitle,
                     style: TextStyle(
-                      fontFamily: AppFonts.satoshi,
+                      fontFamily: AppFonts.arial,
                       fontSize: 12.sp,
                       color: AppColors.white.withValues(alpha: 0.5),
                     ),
@@ -336,7 +333,7 @@ class _QuickPayButton extends StatelessWidget {
           Text(
             label,
             style: TextStyle(
-              fontFamily: AppFonts.satoshi,
+              fontFamily: AppFonts.arial,
               fontSize: 13.sp,
               fontWeight: FontWeight.w600,
               color: AppColors.white,

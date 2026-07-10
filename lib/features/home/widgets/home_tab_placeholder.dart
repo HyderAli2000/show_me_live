@@ -18,7 +18,7 @@ class HomeTabPlaceholder extends StatelessWidget {
       child: Text(
         title,
         style: TextStyle(
-          fontFamily: AppFonts.satoshi,
+          fontFamily: AppFonts.arial,
           fontSize: 20.sp,
           color: AppColors.white,
         ),
