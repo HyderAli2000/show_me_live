@@ -197,9 +197,9 @@ class _InfoRow extends StatelessWidget {
                 label,
                 style: TextStyle(
                   fontFamily: AppFonts.satoshi,
-                  fontSize: 13.sp,
+                  fontSize: 14.sp,
                   fontWeight: FontWeight.w500,
-                  color: AppColors.white.withValues(alpha: 0.55),
+                  color: AppColors.white,
                 ),
               ),
               SizedBox(height: 4.h),
@@ -207,7 +207,7 @@ class _InfoRow extends StatelessWidget {
                 value,
                 style: TextStyle(
                   fontFamily: AppFonts.satoshi,
-                  fontSize: 15.sp,
+                  fontSize: 14.sp,
                   fontWeight: FontWeight.w600,
                   color: AppColors.white,
                 ),

@@ -27,29 +27,7 @@ class ProfileScreen extends StatelessWidget {
             padding: EdgeInsets.fromLTRB(18.w, 8.h, 18.w, 20.h),
             child: Column(
               children: [
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: GestureDetector(
-                    onTap: () =>
-                        Get.to(() => const AccountSettingsScreen()),
-                    child: Container(
-                      padding: EdgeInsets.all(9.w),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF09062B),
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: Colors.white.withValues(alpha: 0.08),
-                        ),
-                      ),
-                      child: Icon(
-                        Icons.settings_outlined,
-                        color: AppColors.white,
-                        size: 20.w,
-                      ),
-                    ),
-                  ),
-                ),
-                4.verticalSpace,
+                20.verticalSpace,
                 Container(
                   width: 118.w,
                   height: 118.w,

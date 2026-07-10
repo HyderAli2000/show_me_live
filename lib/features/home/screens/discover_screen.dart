@@ -7,6 +7,7 @@ import 'package:show_me_live/core/theme/app_fonts.dart';
 import 'package:show_me_live/core/theme/assets_icons.dart';
 import 'package:show_me_live/core/theme/assets_images.dart';
 import 'package:show_me_live/features/events/models/event_checkout_data.dart';
+import 'package:show_me_live/features/events/screens/create_event_screen.dart';
 import 'package:show_me_live/features/events/screens/event_details_screen.dart';
 
 class DiscoverScreen extends StatelessWidget {
@@ -59,18 +60,50 @@ class DiscoverScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      padding: EdgeInsets.fromLTRB(18.w, 4.h, 18.w, 120.h),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        crossAxisSpacing: 14.w,
-        mainAxisSpacing: 14.h,
-        childAspectRatio: 0.9,
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: GridView.builder(
+        padding: EdgeInsets.fromLTRB(18.w, 4.h, 18.w, 120.h),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 14.w,
+          mainAxisSpacing: 14.h,
+          childAspectRatio: 0.9,
+        ),
+        itemCount: _events.length,
+        itemBuilder: (context, index) {
+          return _DiscoverEventCard(event: _events[index]);
+        },
       ),
-      itemCount: _events.length,
-      itemBuilder: (context, index) {
-        return _DiscoverEventCard(event: _events[index]);
-      },
+
+      floatingActionButton: GestureDetector(
+        onTap: () => Get.to(() => const CreateEventScreen()),
+        child: Container(
+          width: 50.w,
+          height: 50.w,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            gradient: LinearGradient(
+              stops: const [0.0, 0.3, 1.0],
+              colors: [
+                AppColors.fabGradientStart,
+                AppColors.fabGradientStart,
+                AppColors.fabGradientEnd,
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: AppColors.primaryBlue.withValues(alpha: 0.35),
+                blurRadius: 10,
+                offset: const Offset(0, 6),
+              ),
+            ],
+          ),
+          child: Icon(Icons.add, size: 24.sp, color: AppColors.darkBlue),
+        ),
+      ),
     );
   }
 }

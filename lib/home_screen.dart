@@ -138,29 +138,29 @@ class HomeScreen extends StatelessWidget {
       floatingActionButton: GestureDetector(
         onTap: () => Get.to(() => const CreateEventScreen()),
         child: Container(
-        width: 50.w,
-        height: 50.w,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          gradient: LinearGradient(
-            stops: const [0.0, 0.3, 1.0],
-            colors: [
-              AppColors.fabGradientStart,
-              AppColors.fabGradientStart,
-              AppColors.fabGradientEnd,
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: AppColors.primaryBlue.withValues(alpha: 0.35),
-              blurRadius: 10,
-              offset: const Offset(0, 6),
+          width: 50.w,
+          height: 50.w,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            gradient: LinearGradient(
+              stops: const [0.0, 0.3, 1.0],
+              colors: [
+                AppColors.fabGradientStart,
+                AppColors.fabGradientStart,
+                AppColors.fabGradientEnd,
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
             ),
-          ],
-        ),
-        child: Icon(Icons.add, size: 24.sp, color: AppColors.darkBlue),
+            boxShadow: [
+              BoxShadow(
+                color: AppColors.primaryBlue.withValues(alpha: 0.35),
+                blurRadius: 10,
+                offset: const Offset(0, 6),
+              ),
+            ],
+          ),
+          child: Icon(Icons.add, size: 24.sp, color: AppColors.darkBlue),
         ),
       ),
     );
@@ -238,111 +238,110 @@ class _EventCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Get.to(
-        () => EventDetailsScreen(event: event.toCheckoutData()),
-      ),
+      onTap: () =>
+          Get.to(() => EventDetailsScreen(event: event.toCheckoutData())),
       child: Container(
-      width: width,
-      padding: EdgeInsets.all(10.w),
-      decoration: BoxDecoration(
-        color: Color(0xff09062B),
-        borderRadius: BorderRadius.circular(18.r),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Stack(
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(14.r),
-                child: Image.asset(
-                  event.image,
-                  width: double.infinity,
-                  height: 140.h,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Positioned(
-                right: 10.w,
-                bottom: 10.h,
-                child: Container(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 12.w,
-                    vertical: 5.h,
+        width: width,
+        padding: EdgeInsets.all(10.w),
+        decoration: BoxDecoration(
+          color: Color(0xff09062B),
+          borderRadius: BorderRadius.circular(18.r),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Stack(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(14.r),
+                  child: Image.asset(
+                    event.image,
+                    width: double.infinity,
+                    height: 140.h,
+                    fit: BoxFit.cover,
                   ),
-                  decoration: BoxDecoration(
-                    color: AppColors.backgroundDark.withValues(alpha: 0.85),
-                    borderRadius: BorderRadius.circular(20.r),
-                    border: Border.all(
-                      color: AppColors.primaryBlue.withValues(alpha: 0.35),
+                ),
+                Positioned(
+                  right: 10.w,
+                  bottom: 10.h,
+                  child: Container(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 12.w,
+                      vertical: 5.h,
+                    ),
+                    decoration: BoxDecoration(
+                      color: AppColors.backgroundDark.withValues(alpha: 0.85),
+                      borderRadius: BorderRadius.circular(20.r),
+                      border: Border.all(
+                        color: AppColors.primaryBlue.withValues(alpha: 0.35),
+                      ),
+                    ),
+                    child: Text(
+                      event.category,
+                      style: TextStyle(
+                        fontFamily: AppFonts.satoshi,
+                        fontSize: 11.sp,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.primaryBlue,
+                      ),
                     ),
                   ),
+                ),
+              ],
+            ),
+            SizedBox(height: 12.h),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
                   child: Text(
-                    event.category,
+                    event.title,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontFamily: AppFonts.satoshi,
-                      fontSize: 11.sp,
-                      fontWeight: FontWeight.w600,
-                      color: AppColors.primaryBlue,
+                      fontSize: 14.sp,
+                      fontWeight: FontWeight.w500,
+                      color: AppColors.white,
                     ),
                   ),
                 ),
-              ),
-            ],
-          ),
-          SizedBox(height: 12.h),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: Text(
-                  event.title,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
+                SizedBox(width: 8.w),
+                Text(
+                  event.price,
                   style: TextStyle(
-                    fontFamily: AppFonts.satoshi,
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w500,
-                    color: AppColors.white,
+                    fontFamily: AppFonts.tactic,
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.primaryBlue,
                   ),
                 ),
-              ),
-              SizedBox(width: 8.w),
-              Text(
-                event.price,
-                style: TextStyle(
-                  fontFamily: AppFonts.tactic,
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.primaryBlue,
+              ],
+            ),
+            SizedBox(height: 8.h),
+            Row(
+              children: [
+                Image.asset(
+                  AssetIcons.eveB,
+                  width: 20.w,
+                  height: 20.h,
+                  fit: BoxFit.cover,
+                  color: AppColors.darkBlue,
                 ),
-              ),
-            ],
-          ),
-          SizedBox(height: 8.h),
-          Row(
-            children: [
-              Image.asset(
-                AssetIcons.eveB,
-                width: 20.w,
-                height: 20.h,
-                fit: BoxFit.cover,
-                color: AppColors.darkBlue,
-              ),
-              SizedBox(width: 6.w),
-              Text(
-                event.date,
-                style: TextStyle(
-                  fontFamily: AppFonts.satoshi,
-                  fontSize: 12.sp,
-                  fontWeight: FontWeight.w400,
-                  color: AppColors.white.withValues(alpha: 0.55),
+                SizedBox(width: 6.w),
+                Text(
+                  event.date,
+                  style: TextStyle(
+                    fontFamily: AppFonts.satoshi,
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w400,
+                    color: AppColors.white.withValues(alpha: 0.55),
+                  ),
                 ),
-              ),
-            ],
-          ),
-        ],
-      ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -371,10 +370,10 @@ class _EventData {
   final String date;
 
   EventCheckoutData toCheckoutData() => EventCheckoutData(
-        image: image,
-        title: title,
-        subtitle: 'Lorem ipsum dolor sit amet.',
-        price: price,
-        displayDate: date,
-      );
+    image: image,
+    title: title,
+    subtitle: 'Lorem ipsum dolor sit amet.',
+    price: price,
+    displayDate: date,
+  );
 }

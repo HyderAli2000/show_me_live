@@ -46,7 +46,8 @@ class _NavbarState extends State<Navbar> {
               showSearchRow: controller.currentIndex <= 1,
               onNotificationTap: () =>
                   Get.to(() => const NotificationsScreen()),
-              onAddTap: () => Get.to(() => const CreateEventScreen()),
+              // onAddTap: () => Get.to(() => const CreateEventScreen()),
+              onAddTap: () {},
               onSearchTap: () {},
             ),
             body: SafeArea(

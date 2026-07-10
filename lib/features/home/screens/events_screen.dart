@@ -7,7 +7,9 @@ import 'package:show_me_live/core/theme/app_fonts.dart';
 import 'package:show_me_live/core/theme/assets_icons.dart';
 import 'package:show_me_live/core/theme/assets_images.dart';
 import 'package:show_me_live/features/events/models/event_checkout_data.dart';
+import 'package:show_me_live/features/events/screens/create_event_screen.dart';
 import 'package:show_me_live/features/home/screens/created_event_detail.dart';
+import 'package:show_me_live/features/home/screens/live_stream_screen.dart';
 import 'package:show_me_live/features/home/screens/purchased_event_detail.dart';
 
 enum EventListCategory {
@@ -132,13 +134,13 @@ class _EventsScreenState extends State<EventsScreen> {
   }
 
   List<_EventListItem> get _currentEvents => switch (_currentCategory) {
-        EventListCategory.purchasedUpcoming => _purchasedUpcomingEvents,
-        EventListCategory.purchasedLive => _purchasedLiveEvents,
-        EventListCategory.purchasedPast => _purchasedPastEvents,
-        EventListCategory.createdUpcoming => _createdUpcomingEvents,
-        EventListCategory.createdLive => _createdLiveEvents,
-        EventListCategory.createdPast => _createdPastEvents,
-      };
+    EventListCategory.purchasedUpcoming => _purchasedUpcomingEvents,
+    EventListCategory.purchasedLive => _purchasedLiveEvents,
+    EventListCategory.purchasedPast => _purchasedPastEvents,
+    EventListCategory.createdUpcoming => _createdUpcomingEvents,
+    EventListCategory.createdLive => _createdLiveEvents,
+    EventListCategory.createdPast => _createdPastEvents,
+  };
 
   void _onPrimaryTabChanged(int index) {
     setState(() => _primaryTabIndex = index);
@@ -159,86 +161,88 @@ class _EventsScreenState extends State<EventsScreen> {
 
     switch (category) {
       case EventListCategory.purchasedUpcoming:
-        Get.to(
-          () => PurchasedEventDetailScreen(
-            event: data,
-            upcoming: true,
-          ),
-        );
+        Get.to(() => PurchasedEventDetailScreen(event: data, upcoming: true));
       case EventListCategory.purchasedLive:
-        Get.to(
-          () => PurchasedEventDetailScreen(
-            event: data,
-            isLive: true,
-          ),
-        );
+        Get.to(() => PurchasedEventDetailScreen(event: data, isLive: true));
       case EventListCategory.purchasedPast:
-        Get.to(
-          () => PurchasedEventDetailScreen(
-            event: data,
-            past: true,
-          ),
-        );
+        Get.to(() => PurchasedEventDetailScreen(event: data, past: true));
       case EventListCategory.createdUpcoming:
-        Get.to(
-          () => CreatedEventDetailScreen(
-            event: data,
-            upcoming: true,
-          ),
-        );
+        Get.to(() => CreatedEventDetailScreen(event: data, upcoming: true));
       case EventListCategory.createdLive:
-        Get.to(
-          () => CreatedEventDetailScreen(
-            event: data,
-            isLive: true,
-          ),
-        );
+        Get.to(() => LiveStreamScreen(isCreated: true));
       case EventListCategory.createdPast:
-        Get.to(
-          () => CreatedEventDetailScreen(
-            event: data,
-            past: true,
-          ),
-        );
+        Get.to(() => CreatedEventDetailScreen(event: data, past: true));
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        20.verticalSpace,
-        _PrimaryTabBar(
-          tabs: _primaryTabs,
-          selectedIndex: _primaryTabIndex,
-          onChanged: _onPrimaryTabChanged,
-        ),
-        SizedBox(height: 14.h),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 18.w),
-          child: _SubTabBar(
-            tabs: _subTabs,
-            selectedIndex: _subTabIndex,
-            onChanged: _onSubTabChanged,
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          20.verticalSpace,
+          _PrimaryTabBar(
+            tabs: _primaryTabs,
+            selectedIndex: _primaryTabIndex,
+            onChanged: _onPrimaryTabChanged,
           ),
-        ),
-        SizedBox(height: 16.h),
-        Expanded(
-          child: ListView.separated(
-            padding: EdgeInsets.fromLTRB(18.w, 0, 18.w, 120.h),
-            itemCount: _currentEvents.length,
-            separatorBuilder: (_, __) => SizedBox(height: 12.h),
-            itemBuilder: (context, index) {
-              return _EventListTile(
-                event: _currentEvents[index],
-                category: _currentCategory,
-                onTap: _onEventTap,
-              );
-            },
+          SizedBox(height: 20.h),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 18.w),
+            child: _SubTabBar(
+              tabs: _subTabs,
+              selectedIndex: _subTabIndex,
+              onChanged: _onSubTabChanged,
+            ),
           ),
+          SizedBox(height: 16.h),
+          Expanded(
+            child: ListView.separated(
+              padding: EdgeInsets.fromLTRB(18.w, 0, 18.w, 120.h),
+              itemCount: _currentEvents.length,
+              separatorBuilder: (_, __) => SizedBox(height: 12.h),
+              itemBuilder: (context, index) {
+                return _EventListTile(
+                  event: _currentEvents[index],
+                  category: _currentCategory,
+                  onTap: _onEventTap,
+                );
+              },
+            ),
+          ),
+        ],
+      ),
+
+      floatingActionButton: GestureDetector(
+        onTap: () => Get.to(() => const CreateEventScreen()),
+        child: Container(
+          width: 50.w,
+          height: 50.w,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            gradient: LinearGradient(
+              stops: const [0.0, 0.3, 1.0],
+              colors: [
+                AppColors.fabGradientStart,
+                AppColors.fabGradientStart,
+                AppColors.fabGradientEnd,
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: AppColors.primaryBlue.withValues(alpha: 0.35),
+                blurRadius: 10,
+                offset: const Offset(0, 6),
+              ),
+            ],
+          ),
+          child: Icon(Icons.add, size: 24.sp, color: AppColors.darkBlue),
         ),
-      ],
+      ),
     );
   }
 }
@@ -461,10 +465,10 @@ class _EventListItem {
   final String price;
 
   EventCheckoutData toCheckoutData() => EventCheckoutData(
-        image: image,
-        title: title,
-        subtitle: 'Lorem ipsum dolor sit amet.',
-        price: price,
-        displayDate: date,
-      );
+    image: image,
+    title: title,
+    subtitle: 'Lorem ipsum dolor sit amet.',
+    price: price,
+    displayDate: date,
+  );
 }

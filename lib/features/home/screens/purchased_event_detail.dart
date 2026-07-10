@@ -9,7 +9,7 @@ import 'package:show_me_live/core/theme/assets_images.dart';
 import 'package:show_me_live/core/widgets/primary_button.dart';
 import 'package:show_me_live/features/events/models/event_checkout_data.dart';
 import 'package:show_me_live/features/events/widgets/event_screen_app_bar.dart';
-import 'package:show_me_live/features/home/widgets/add_camera_flow.dart';
+import 'package:show_me_live/features/home/screens/live_stream_screen.dart';
 
 class PurchasedEventDetailScreen extends StatelessWidget {
   const PurchasedEventDetailScreen({
@@ -150,6 +150,7 @@ class PurchasedEventDetailScreen extends StatelessWidget {
                           : '',
                       onPressed: () {
                         if (isLive == true) {
+                          Get.to(() => LiveStreamScreen(title: event.title));
                         } else if (upcoming == true) {
                           Get.back();
                         }
@@ -197,9 +198,9 @@ class _InfoRow extends StatelessWidget {
                 label,
                 style: TextStyle(
                   fontFamily: AppFonts.satoshi,
-                  fontSize: 13.sp,
-                  fontWeight: FontWeight.w500,
-                  color: AppColors.white.withValues(alpha: 0.55),
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.white,
                 ),
               ),
               SizedBox(height: 4.h),
@@ -207,7 +208,7 @@ class _InfoRow extends StatelessWidget {
                 value,
                 style: TextStyle(
                   fontFamily: AppFonts.satoshi,
-                  fontSize: 15.sp,
+                  fontSize: 14.sp,
                   fontWeight: FontWeight.w600,
                   color: AppColors.white,
                 ),
