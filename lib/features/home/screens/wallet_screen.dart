@@ -10,6 +10,7 @@ import 'package:show_me_live/features/home/models/gift_item.dart';
 import 'package:show_me_live/features/home/screens/my_collection.dart';
 import 'package:show_me_live/features/home/widgets/gift_purchase_flow.dart';
 import 'package:show_me_live/features/home/widgets/send_gift_bottom_sheet.dart';
+import 'package:show_me_live/features/home/widgets/send_gift_confirm_dialog.dart';
 
 class WalletScreen extends StatefulWidget {
   const WalletScreen({super.key});
@@ -22,44 +23,6 @@ class _WalletScreenState extends State<WalletScreen> {
   int _selectedTab = 0;
 
   static const _tabs = ['Transactions', 'Store'];
-
-  static const _stickerPacks = [
-    GiftItem(
-      name: 'Like',
-      pack: '10 pack',
-      price: '\$5',
-      image: AssetImages.s1,
-      stackColors: [Color(0xFF7B5CFF), Color(0xFF6348E8), Color(0xFF4E38CC)],
-    ),
-    GiftItem(
-      name: 'Cheers',
-      pack: '10 pack',
-      price: '\$7',
-      image: AssetImages.s2,
-      stackColors: [Color(0xFF5C1A3A), Color(0xFF4A1530), Color(0xFF3A1028)],
-    ),
-    GiftItem(
-      name: 'Spotlight',
-      pack: '10 pack',
-      price: '\$10',
-      image: AssetImages.s3,
-      stackColors: [Color(0xFF8B2020), Color(0xFF6E1818), Color(0xFF551212)],
-    ),
-    GiftItem(
-      name: 'Encore',
-      pack: '10 pack',
-      price: '\$15',
-      image: AssetImages.s4,
-      stackColors: [Color(0xFFFFD700), Color(0xFFE6C200), Color(0xFFCCAD00)],
-    ),
-    GiftItem(
-      name: 'Headliner',
-      pack: '1',
-      price: '\$20',
-      image: AssetImages.s5,
-      stackColors: [Color(0xFFFF00AA), Color(0xFFD90092), Color(0xFFB30078)],
-    ),
-  ];
 
   static const _transactions = [
     _TransactionItem(
@@ -109,7 +72,7 @@ class _WalletScreenState extends State<WalletScreen> {
             if (_selectedTab == 0)
               const _TransactionsTab(transactions: _transactions)
             else
-              _StoreTab(stickerPacks: _stickerPacks),
+              _StoreTab(stickerPacks: standardGifts),
           ],
         ),
       ),
@@ -153,7 +116,7 @@ class _BalanceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.symmetric(horizontal: 22.w, vertical: 28.h),
+      padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 28.h),
       decoration: BoxDecoration(
         color: Color(0xff6155F9),
         borderRadius: BorderRadius.circular(20.r),
@@ -165,27 +128,33 @@ class _BalanceCard extends StatelessWidget {
           ),
         ],
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+      child: Row(
         children: [
-          Text(
-            '\$184',
-            style: TextStyle(
-              fontFamily: AppFonts.arial,
-              fontSize: 40.sp,
-              fontWeight: FontWeight.w700,
-              color: AppColors.white,
-            ),
-          ),
-          SizedBox(height: 6.h),
-          Text(
-            'Amount Available',
-            style: TextStyle(
-              fontFamily: AppFonts.arial,
-              fontSize: 16.sp,
-              fontWeight: FontWeight.w600,
-              color: AppColors.white,
-            ),
+          Image.asset(AssetImages.coin, width: 80.w, height: 80.h),
+          SizedBox(width: 10.w),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '1,584',
+                style: TextStyle(
+                  fontFamily: AppFonts.arial,
+                  fontSize: 40.sp,
+                  fontWeight: FontWeight.w700,
+                  color: AppColors.white,
+                ),
+              ),
+              SizedBox(height: 6.h),
+              Text(
+                'Coins Available',
+                style: TextStyle(
+                  fontFamily: AppFonts.arial,
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.white,
+                ),
+              ),
+            ],
           ),
         ],
       ),
@@ -324,8 +293,106 @@ class _TransactionsTab extends StatelessWidget {
   }
 }
 
-class _StoreTab extends StatelessWidget {
+class _StoreTab extends StatefulWidget {
   const _StoreTab({required this.stickerPacks});
+
+  final List<GiftItem> stickerPacks;
+
+  @override
+  State<_StoreTab> createState() => _StoreTabState();
+}
+
+class _StoreTabState extends State<_StoreTab> {
+  int _selectedSubTab = 0;
+
+  static const _subTabs = ['Stickers', 'Coins'];
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _StoreSubTabBar(
+          tabs: _subTabs,
+          selectedIndex: _selectedSubTab,
+          onChanged: (index) => setState(() => _selectedSubTab = index),
+        ),
+        SizedBox(height: 18.h),
+        if (_selectedSubTab == 0)
+          _StickersStorePanel(stickerPacks: widget.stickerPacks)
+        else
+          const _CoinsStorePanel(),
+      ],
+    );
+  }
+}
+
+class _StoreSubTabBar extends StatelessWidget {
+  const _StoreSubTabBar({
+    required this.tabs,
+    required this.selectedIndex,
+    required this.onChanged,
+  });
+
+  final List<String> tabs;
+  final int selectedIndex;
+  final ValueChanged<int> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          children: List.generate(tabs.length, (index) {
+            final selected = selectedIndex == index;
+            return Expanded(
+              child: GestureDetector(
+                onTap: () => onChanged(index),
+                behavior: HitTestBehavior.opaque,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 10.h),
+                  child: Text(
+                    tabs[index],
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontFamily: AppFonts.arial,
+                      fontSize: 15.sp,
+                      fontWeight: FontWeight.w700,
+                      color: selected
+                          ? AppColors.primaryBlue
+                          : AppColors.white.withValues(alpha: 0.45),
+                    ),
+                  ),
+                ),
+              ),
+            );
+          }),
+        ),
+        Stack(
+          children: [
+            Container(
+              height: 1,
+              color: AppColors.white.withValues(alpha: 0.12),
+            ),
+            AnimatedAlign(
+              duration: const Duration(milliseconds: 200),
+              alignment: selectedIndex == 0
+                  ? Alignment.centerLeft
+                  : Alignment.centerRight,
+              child: FractionallySizedBox(
+                widthFactor: 0.5,
+                child: Container(height: 2, color: AppColors.primaryBlue),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class _StickersStorePanel extends StatelessWidget {
+  const _StickersStorePanel({required this.stickerPacks});
 
   final List<GiftItem> stickerPacks;
 
@@ -337,7 +404,7 @@ class _StoreTab extends StatelessWidget {
         GestureDetector(
           onTap: () => Get.to(() => const MyCollectionScreen()),
           child: SizedBox(
-            height: 130.h,
+            height: 150.h,
             child: Stack(
               clipBehavior: Clip.none,
               children: [
@@ -348,7 +415,7 @@ class _StoreTab extends StatelessWidget {
                   top: 0.h,
                   child: Container(
                     width: double.infinity,
-                    padding: EdgeInsets.fromLTRB(18.w, 16.h, 110.w, 16.h),
+                    padding: EdgeInsets.fromLTRB(18.w, 16.h, 138.w, 16.h),
                     decoration: BoxDecoration(
                       color: const Color(0xFF252047),
                       borderRadius: BorderRadius.circular(20.r),
@@ -396,26 +463,26 @@ class _StoreTab extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  right: 65.w,
-                  bottom: 10.h,
+                  right: 90.w,
+                  bottom: 8.h,
                   child: Transform.rotate(
                     angle: -0.18,
                     child: CollectionPreview(
-                      size: 90.w,
-                      color: const Color(0xFF5C1A3A),
-                      image: AssetImages.s5,
+                      size: 115.w,
+                      color: const Color(0xFFA9AA9F),
+                      image: AssetImages.s16,
                     ),
                   ),
                 ),
                 Positioned(
-                  right: 20.w,
-                  bottom: 0.h,
+                  right: 12.w,
+                  bottom: -4.h,
                   child: Transform.rotate(
                     angle: 0.35,
                     child: CollectionPreview(
-                      size: 90.w,
+                      size: 115.w,
                       color: const Color(0xFF7B5CFF),
-                      image: AssetImages.s1,
+                      image: AssetImages.s2,
                     ),
                   ),
                 ),
@@ -437,23 +504,146 @@ class _StoreTab extends StatelessWidget {
         GridView.builder(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
-          itemCount: gifts.length,
+          itemCount: stickerPacks.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3,
-            mainAxisSpacing: 20.h,
-            crossAxisSpacing: 12.w,
-            childAspectRatio: 0.8,
+            mainAxisSpacing: 30.h,
+            crossAxisSpacing: 18.w,
+            childAspectRatio: 0.55,
           ),
           itemBuilder: (context, index) {
             return GestureDetector(
               onTap: () {
-                GiftPurchaseFlow.showPaymentDialog(gift: stickerPacks[index]);
+                GiftPurchaseFlow.showGiftPaymentDialog(
+                  gift: stickerPacks[index],
+                );
               },
               child: GiftTile(gift: stickerPacks[index]),
             );
           },
         ),
+        GestureDetector(
+          onTap: () {
+            showSendGiftConfirmDialog(featuredGift);
+          },
+          child: FeaturedGiftTile(gift: featuredGift),
+        ),
       ],
+    );
+  }
+}
+
+class _CoinPack {
+  const _CoinPack({required this.coins, required this.price});
+
+  final String coins;
+  final String price;
+}
+
+class _CoinsStorePanel extends StatelessWidget {
+  const _CoinsStorePanel();
+
+  static const _coinPacks = [
+    _CoinPack(coins: '50', price: r'$0.50'),
+    _CoinPack(coins: '325', price: r'$3.00'),
+    _CoinPack(coins: '645', price: r'$6.00'),
+    _CoinPack(coins: '120', price: r'$12.00'),
+    _CoinPack(coins: '1500', price: r'$16.00'),
+    _CoinPack(coins: '3500', price: r'$35.00'),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Buy Coins',
+          style: TextStyle(
+            fontFamily: AppFonts.arial,
+            fontSize: 16.sp,
+            fontWeight: FontWeight.w700,
+            color: AppColors.white,
+          ),
+        ),
+        SizedBox(height: 16.h),
+        GridView.builder(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: _coinPacks.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            mainAxisSpacing: 14.h,
+            crossAxisSpacing: 14.w,
+            childAspectRatio: 0.75,
+          ),
+          itemBuilder: (context, index) {
+            final pack = _coinPacks[index];
+            return GestureDetector(
+              onTap: () {
+                GiftPurchaseFlow.showPaymentDialog(
+                  amount: pack.price,
+                  subtitle: 'Complete your coin purchase',
+                  onPaid: () =>
+                      GiftPurchaseFlow.showCoinSuccessScreen(coins: pack.coins),
+                );
+              },
+              child: _CoinPackCard(pack: pack),
+            );
+          },
+        ),
+      ],
+    );
+  }
+}
+
+class _CoinPackCard extends StatelessWidget {
+  const _CoinPackCard({required this.pack});
+
+  final _CoinPack pack;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.fromLTRB(14.w, 16.h, 14.w, 18.h),
+      decoration: BoxDecoration(
+        color: const Color(0xFF6155F9).withValues(alpha: 0.3),
+        borderRadius: BorderRadius.circular(18.r),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SizedBox(
+            height: 120.h,
+            child: Image.asset(
+              AssetImages.coin,
+              height: 104.h,
+              fit: BoxFit.contain,
+            ),
+          ),
+          SizedBox(height: 8.h),
+          Text(
+            '${pack.coins} Coins',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontFamily: AppFonts.arial,
+              fontSize: 18.sp,
+              fontWeight: FontWeight.w700,
+              color: AppColors.white,
+            ),
+          ),
+          SizedBox(height: 6.h),
+          Text(
+            pack.price,
+            style: TextStyle(
+              fontFamily: AppFonts.arial,
+              fontSize: 16.sp,
+              fontWeight: FontWeight.w500,
+              color: AppColors.white.withValues(alpha: 0.85),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -475,7 +665,6 @@ class CollectionPreview extends StatelessWidget {
     return Container(
       width: size,
       height: size,
-      padding: EdgeInsets.all(size * 0.12),
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(14.r),

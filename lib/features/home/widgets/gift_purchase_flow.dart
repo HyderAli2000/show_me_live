@@ -12,8 +12,38 @@ import 'package:show_me_live/features/home/models/gift_item.dart';
 class GiftPurchaseFlow {
   GiftPurchaseFlow._();
 
-  static void showPaymentDialog({required GiftItem gift}) {
-    Get.dialog(_GiftPaymentDialog(gift: gift), barrierDismissible: true);
+  static void showPaymentDialog({
+    required String amount,
+    String subtitle = 'Complete your gift purchase',
+    required VoidCallback onPaid,
+  }) {
+    Get.dialog(
+      _GiftPaymentDialog(
+        amount: amount,
+        subtitle: subtitle,
+        onPaid: onPaid,
+      ),
+      barrierDismissible: true,
+    );
+  }
+
+  static void showGiftPaymentDialog({required GiftItem gift}) {
+    showPaymentDialog(
+      amount: gift.price,
+      onPaid: () => showSuccessScreen(gift: gift),
+    );
+  }
+
+  static void showCoinSuccessScreen({required String coins}) {
+    Get.to(
+      () => AppSuccessScreen(
+        title: '$coins Coins Added',
+        description:
+            'Your coin purchase was successful. You can now use them during live events.',
+        primaryActionLabel: 'Continue',
+        onPrimaryAction: Get.back,
+      ),
+    );
   }
 
   static void showSuccessScreen({required GiftItem gift}) {
@@ -30,9 +60,15 @@ class GiftPurchaseFlow {
 }
 
 class _GiftPaymentDialog extends StatefulWidget {
-  const _GiftPaymentDialog({required this.gift});
+  const _GiftPaymentDialog({
+    required this.amount,
+    required this.subtitle,
+    required this.onPaid,
+  });
 
-  final GiftItem gift;
+  final String amount;
+  final String subtitle;
+  final VoidCallback onPaid;
 
   @override
   State<_GiftPaymentDialog> createState() => _GiftPaymentDialogState();
@@ -43,7 +79,7 @@ class _GiftPaymentDialogState extends State<_GiftPaymentDialog> {
 
   @override
   Widget build(BuildContext context) {
-    final amount = widget.gift.price;
+    final amount = widget.amount;
 
     return Dialog(
       backgroundColor: Colors.transparent,
@@ -87,7 +123,7 @@ class _GiftPaymentDialogState extends State<_GiftPaymentDialog> {
                         ),
                         SizedBox(height: 8.h),
                         Text(
-                          'Complete your gift purchase',
+                          widget.subtitle,
                           style: TextStyle(
                             fontFamily: AppFonts.arial,
                             fontSize: 13.sp,
@@ -205,7 +241,7 @@ class _GiftPaymentDialogState extends State<_GiftPaymentDialog> {
                 label: 'Pay $amount',
                 onPressed: () {
                   Get.back();
-                  GiftPurchaseFlow.showSuccessScreen(gift: widget.gift);
+                  widget.onPaid();
                 },
                 height: 50.h,
                 borderRadius: 30.r,

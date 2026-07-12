@@ -111,7 +111,7 @@ class _SendGiftConfirmDialog extends StatelessWidget {
               label: 'Send Gift',
               onPressed: () {
                 Get.back();
-                GiftPurchaseFlow.showPaymentDialog(gift: gift);
+                GiftPurchaseFlow.showGiftPaymentDialog(gift: gift);
               },
               height: 50.h,
               borderRadius: 30.r,

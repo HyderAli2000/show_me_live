@@ -151,14 +151,14 @@ class _MyCollectionScreenState extends State<MyCollectionScreen> {
                         ),
                       ),
                       Positioned(
-                        right: 65.w,
+                        right: 90.w,
                         bottom: 10.h,
                         child: Transform.rotate(
                           angle: -0.18,
                           child: CollectionPreview(
-                            size: 90.w,
-                            color: const Color(0xFF5C1A3A),
-                            image: AssetImages.s5,
+                            size: 100.w,
+                            color: const Color(0xFFA9AA9F),
+                            image: AssetImages.s16,
                           ),
                         ),
                       ),
@@ -168,9 +168,9 @@ class _MyCollectionScreenState extends State<MyCollectionScreen> {
                         child: Transform.rotate(
                           angle: 0.35,
                           child: CollectionPreview(
-                            size: 90.w,
+                            size: 100.w,
                             color: const Color(0xFF7B5CFF),
-                            image: AssetImages.s1,
+                            image: AssetImages.s2,
                           ),
                         ),
                       ),
@@ -194,9 +194,9 @@ class _MyCollectionScreenState extends State<MyCollectionScreen> {
                   itemCount: _stickerPacks.length,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
-                    mainAxisSpacing: 20.h,
-                    crossAxisSpacing: 12.w,
-                    childAspectRatio: 0.8,
+                    mainAxisSpacing: 30.h,
+                    crossAxisSpacing: 18.w,
+                    childAspectRatio: 0.55,
                   ),
                   itemBuilder: (context, index) {
                     return GiftTile(gift: _stickerPacks[index]);

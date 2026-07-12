@@ -11,6 +11,8 @@ import 'package:show_me_live/core/widgets/primary_button.dart';
 import 'package:show_me_live/features/events/models/event_checkout_data.dart';
 import 'package:show_me_live/features/events/screens/event_details_screen.dart';
 import 'package:show_me_live/features/events/widgets/event_screen_app_bar.dart';
+import 'package:show_me_live/features/events/widgets/featured_event_bottom_sheet.dart';
+import 'package:show_me_live/features/home/widgets/gift_purchase_flow.dart';
 import 'package:show_me_live/navbar.dart';
 
 class CreateEventScreen extends StatefulWidget {
@@ -42,8 +44,8 @@ class _CreateEventScreenState extends State<CreateEventScreen> {
     super.dispose();
   }
 
-  void _submitEvent() {
-    final event = EventCheckoutData(
+  EventCheckoutData _buildEvent() {
+    return EventCheckoutData(
       image: AssetImages.eve1,
       title: _nameController.text.trim().isEmpty
           ? 'Lorem ipsum dolor sit amet.'
@@ -65,7 +67,9 @@ class _CreateEventScreenState extends State<CreateEventScreen> {
           ? 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
           : _descriptionController.text.trim(),
     );
+  }
 
+  void _showEventCreatedSuccess(EventCheckoutData event) {
     Get.off(
       () => AppSuccessScreen(
         title: 'Event Created',
@@ -77,6 +81,26 @@ class _CreateEventScreenState extends State<CreateEventScreen> {
         primaryActionLabel: 'View Event',
         onPrimaryAction: () => Get.off(() => EventDetailsScreen(event: event)),
       ),
+    );
+  }
+
+  void _submitEvent() {
+    final event = _buildEvent();
+
+    showFeaturedEventBottomSheet(
+      context: context,
+      onSkip: () {
+        Navigator.of(context).pop();
+        _showEventCreatedSuccess(event);
+      },
+      onAddNow: (plan) {
+        Navigator.of(context).pop();
+        GiftPurchaseFlow.showPaymentDialog(
+          amount: plan.payAmount,
+          subtitle: 'Complete your featured event purchase',
+          onPaid: () => _showEventCreatedSuccess(event),
+        );
+      },
     );
   }
 
@@ -102,24 +126,25 @@ class _CreateEventScreenState extends State<CreateEventScreen> {
                   padding: EdgeInsets.fromLTRB(18.w, 8.h, 18.w, 20.h),
                   child: Column(
                     children: [
+                      10.verticalSpace,
                       const _UploadImageBox(),
-                      SizedBox(height: 14.h),
+                      14.verticalSpace,
                       AppTextField(
                         controller: _categoryController,
                         hintText: 'Event Category',
                       ),
-                      SizedBox(height: 14.h),
+                      14.verticalSpace,
                       AppTextField(
                         controller: _nameController,
                         hintText: 'Event Name',
                         textInputAction: TextInputAction.next,
                       ),
-                      SizedBox(height: 14.h),
+                      14.verticalSpace,
                       _MultilineField(
                         controller: _descriptionController,
                         hintText: 'Event Description',
                       ),
-                      SizedBox(height: 14.h),
+                      14.verticalSpace,
                       AppTextField(
                         controller: _dateController,
                         hintText: 'Event Date',
@@ -129,7 +154,7 @@ class _CreateEventScreenState extends State<CreateEventScreen> {
                           size: 18.sp,
                         ),
                       ),
-                      SizedBox(height: 14.h),
+                      14.verticalSpace,
                       AppTextField(
                         controller: _timeController,
                         hintText: 'Event Time',
@@ -139,19 +164,19 @@ class _CreateEventScreenState extends State<CreateEventScreen> {
                           size: 18.sp,
                         ),
                       ),
-                      SizedBox(height: 14.h),
+                      14.verticalSpace, 
                       AppTextField(
                         keyboardType: TextInputType.number,
                         controller: _ticketPriceController,
                         hintText: 'Ticket Price',
                       ),
-                      SizedBox(height: 14.h),
+                      14.verticalSpace,
                       AppTextField(
                         keyboardType: TextInputType.number,
                         controller: _maxMembersController,
                         hintText: 'Maximum Members',
                       ),
-                      SizedBox(height: 14.h),
+                      14.verticalSpace,
                       _EventTypeDropdown(
                         selectedValue: _selectedEventType,
                         onChanged: (value) {

@@ -26,4 +26,16 @@ class AssetImages {
   static const String s3 = 'assets/images/s3.png';
   static const String s4 = 'assets/images/s4.png';
   static const String s5 = 'assets/images/s5.png';
+  static const String s6 = 'assets/images/s6.png';
+  static const String s7 = 'assets/images/s7.png';
+  static const String s8 = 'assets/images/s8.png';
+  static const String s9 = 'assets/images/s9.png';
+  static const String s10 = 'assets/images/s10.png';
+  static const String s11 = 'assets/images/s11.png';
+  static const String s12 = 'assets/images/s12.png';
+  static const String s13 = 'assets/images/s13.png';
+  static const String s14 = 'assets/images/s14.png';
+  static const String s15 = 'assets/images/s15.png';
+  static const String s16 = 'assets/images/s16.png';
+  static const String coin = 'assets/images/coin.png';
 }
